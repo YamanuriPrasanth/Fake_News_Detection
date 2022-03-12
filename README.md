@@ -28,7 +28,7 @@ Fortunately, there are a number of computational techniques that can be used to 
 
 The World Wide Web contains data in diverse formats such as documents, videos, and audios. News published online in an unstructured format (such as news, articles, videos, and audios) is relatively difficult to detect and classify as this strictly requires human expertise. However, computational techniques such as natural language processing (NLP) can be used to detect anomalies that separate a text article that is deceptive in nature from articles that are based on facts . Other techniques involve the analysis of propagation of fake news in contrast with real news . More specifically, the approach analyzes how a fake news article propagates differently on a network relative to a true article. The response that an article gets can be differentiated at a theoretical level to classify the article as real or fake. 
 
-DEPARTMENT OF IT  Page 1 
+
 
 Fake News Detection ![](Aspose.Words.e79f2849-eb9b-43d2-b2fa-5c70c308d5dd.003.png)
 
@@ -58,7 +58,7 @@ News suggestion suggests recent news and suggests the news related to the news w
 
 The main objective is to detect the fake news, which is a classic text classification problem with a straight forward proposition. It is needed to build a model that can differentiate between “Real” news and “Fake” news. This leads to consequences in social networking sites like content. Secondly, the  trolls  are  real humans who “aim to disrupt online communities” in hopes of provoking social  media users  into an emotional  response.  Other  one  is,  Cyborg. Cyborg users are the combination of “automated activities  with human input.”Humans build accounts and use programs to perform activities in social media. For false information detection, there are two categories: Linguistic Cue and Network Analysis approaches. The methods generally used to do such  type  of  works  are Naïve  Bayes  Classifier  and  Support  Vector Machines (SVM). 
 
-DEPARTMENT OF IT  Page 2 
+
 
 Fake News Detection ![](Aspose.Words.e79f2849-eb9b-43d2-b2fa-5c70c308d5dd.004.png)
 
@@ -142,7 +142,7 @@ nltk.download()
 
 This library let us do all the necessary preprocessing on our text data without any pain :D, some of the components of this library are :- **stemming**, **lematizing***,* **tokenizing***, stop-words removal* and so many more… 
 
-DEPARTMENT OF IT  Page 5 
+
 
 Fake News Detection ![](Aspose.Words.e79f2849-eb9b-43d2-b2fa-5c70c308d5dd.007.png)
 
@@ -154,7 +154,7 @@ Whenever we work on *raw text* data, python does not understand words, it just s
 
 Fig 1.1 
 
-DEPARTMENT OF IT  Page 6 
+
 
 Fake News Detection ![](Aspose.Words.e79f2849-eb9b-43d2-b2fa-5c70c308d5dd.009.png)
 
@@ -168,7 +168,6 @@ print(tokenized\_text)
 
 output : [‘Hi’, ‘my’, ‘name’, ‘is’, ‘Yash’] 
 
-DEPARTMENT OF IT  Page 7 
 
 Fake News Detection ![](Aspose.Words.e79f2849-eb9b-43d2-b2fa-5c70c308d5dd.010.png)
 
@@ -189,173 +188,15 @@ There are various Text Pre-processing/Cleaning techniques like :
 - Numbers Removal 
 - Expanding Contractions **and** so many more ! 
 
-DEPARTMENT OF IT  Page 8 
 
-Fake News Detection ![](Aspose.Words.e79f2849-eb9b-43d2-b2fa-5c70c308d5dd.011.png)
 
-**Lower case conversion** 
 
-- *importing necessary libraries* 
 
-**import** os 
-
-**import** numpy **as** np **import** pandas **as** pd 
-
-**import** nltk nltk.download(**'punkt'**)
-
-- *importing/reading raw text data* 
-
-data = pd.read\_csv(**"/content/SMSSpamCollection"**, sep=**"\t"**, header=**None**) data.columns = [**"category"**, **"text"**] 
-
-data.head() 
-
-category  text 
-
-0  ham  Go until jurong point, crazy.. Available 
-
-1  ham  Ok lar... Joking wif u oni... 
-
-2  spam  Free entry **in** 2 a wkly comp to win FA Cup 3  ham  U dun say so early hor... U c already 
-
-4  ham  Nah I don**'t think he goes to usf, he** 
-
-**def** convert\_to\_lower(text): 
-
-**return** text.lower() 
-
-sample\_text = **'MY NAME IS YASH'** lowered = convert\_to\_lower(sample\_text) print(lowered) 
-
-output : my name is yash 
-
-DEPARTMENT OF IT  Page 9 
-
-Fake News Detection ![](Aspose.Words.e79f2849-eb9b-43d2-b2fa-5c70c308d5dd.012.png)
-
-**Removal of HTML tags** 
-
-**import** re 
-
-punc = list(string.punctuation) 
-
-**def** remove\_html\_tags(text): 
-
-html\_pattern = **r'<.\*?>'** 
-
-without\_html = re.sub(pattern=html\_pattern, repl=**' '**, string=text) **return** without\_html 
-
-sample\_text = **'Do you know that <my name> is <yash>'** print(remove\_html\_tags(sample\_text)) 
-
-output : Do you know that is 
-
-**Removal of Numbers** 
-
-**import** re 
-
-**def** remove\_numbers(text): 
-
-number\_pattern = **r'\d+'** 
-
-without\_number = re.sub(pattern=number\_pattern, repl=**" "**, string=text) **return** without\_number 
-
-sample\_text = **'My number is 98274610010 and pincode is 230012'** print(remove\_numbers(sample\_text)) 
-
-output : My number is and pincode is 
-
-DEPARTMENT OF IT  Page 10 
-
-Fake News Detection ![](Aspose.Words.e79f2849-eb9b-43d2-b2fa-5c70c308d5dd.013.png)
-
-**Converting numbers to words** 
-
-- !pip install num2words 
-
-**from** num2words **import** num2words 
-
-**def** convert\_num\_2\_words(text): 
-
-splittedText = text.split() 
-
-**for** i **in** range(len(splittedText)): 
-
-**if** splittedText[i].isdigit(): 
-
-splittedText[i] = num2words(splittedText[i]) num\_2\_words = **' '**.join(splittedText) 
-
-**return** num\_2\_words 
-
-sample\_text = **'My lucky number is 7'** print(convert\_num\_2\_words(sample\_text)) 
-
-output : My lucky number is seven 
-
-**Converting accented characters to ASCII characters** 
-
-- *!pip install unidecode* 
-
-**import** unidecode 
-
-**def** convert\_accented\_2\_ascii(text): **return** unidecode.unidecode(text) 
-
-example\_text = **"This is an example text with accented characters like dèèp lèarning ánd cömputer vísíön etc"** 
-
-print(**f"Original sentence: {**example\_text**}"**) 
-
-print(**f"Converted sentence: {**convert\_accented\_2\_ascii(example\_text)**}"**) 
-
-DEPARTMENT OF IT  Page 11 
-
-Fake News Detection ![](Aspose.Words.e79f2849-eb9b-43d2-b2fa-5c70c308d5dd.005.png)
-
-output : 
-
-**Original sentence:** This is an example text with accented characters like dèèp lèarning ánd cömputer vísíön etc 
-
-**Converted sentence:** This is an example text with accented characters like deep learning and computer vision etc 
-
-**Expanding contractions** 
-
-- *!pip install contractions* **import** contractions 
-
-**def** expand\_contractions(text): 
-
-expanded\_text = [] 
-
-**for** word **in** text.split(): 
-
-expanded\_text.append(contractions.fix(word)) **return " "**.join(expanded\_text) 
-
-example\_text = **"Sometimes our mind doesn't work properly. I've tried everything."** print(**f"Original text: {**example\_text**}"**) 
-
-print(**f"Expanded text: {**expand\_contractions(example\_text)**}"**) 
-
-output : 
-
-**Original text:** Sometimes our mind doesn’t work properly. I’ve tried everything. **Expanded text:** Sometimes our mind does not work properly. I have tried everything. 
-
-DEPARTMENT OF IT  Page 12 
-
-Fake News Detection ![](Aspose.Words.e79f2849-eb9b-43d2-b2fa-5c70c308d5dd.014.png)
 
 **Stemming** 
 
 **Stemming** is the process of reducing a word to its word stem that affixes to suffixes and prefixes or to the roots of words known as a lemma. 
 
-**from** nltk.stem **import** PorterStemmer **from** nltk **import** word\_tokenize 
-
-**def** stemming(text): 
-
-stemmer = PorterStemmer() 
-
-tokens = word\_tokenize(text) 
-
-**for** i **in** range(len(tokens)): 
-
-stem\_word = stemmer.stem(tokens[i]) tokens[i] = stem\_word 
-
-**return " "**.join(tokens) 
-
-sample\_text = **'i love gaming and I recently visited my friend'**s place**'** print(stemming(sample\_text)) 
-
-output : i love gam and I recent visite my friend place 
 
 **Lemmatizing** 
 
@@ -363,87 +204,9 @@ output : i love gam and I recent visite my friend place
 
 *Basic difference between stemming and lemmatizing* is that in **stemming**, the removal of suffix takes place without any meaning. On the other hand, **lemmatizing** takes morphological and lexical meaning into consideration and then returns a much more meaning full ‘lemma’. 
 
-DEPARTMENT OF IT  Page 13 
 
-Fake News Detection ![](Aspose.Words.e79f2849-eb9b-43d2-b2fa-5c70c308d5dd.015.png)
 
-**from** nltk.stem **import** WordNetLemmatizer **from** nltk **import** word\_tokenize 
 
-nltk.download(**"wordnet"**) 
-
-**def** lemmatizing(text): 
-
-lemmatizer = WordNetLemmatizer() 
-
-tokens = word\_tokenize(text) 
-
-**for** i **in** range(len(tokens)): 
-
-lemma\_word = lemmatizer.lemmatize(tokens[i]) tokens[i] = lemma\_word 
-
-**return " "**.join(tokens) 
-
-sample\_text = **'i love gaming and I recently visited my friend'**s place**'** print(lemmatizing(sample\_text)) 
-
-output : i love game and I recent visit my friend place 
-
-**Emoji removal** 
-
-**import** re 
-
-**def** remove\_emoji(text): 
-
-emoji\_pattern = re.compile(**"["** 
-
-**u"\U0001F600-\U0001F64F"** *# emoticons* **u"\U0001F300-\U0001F5FF"** *# symbols & pictographs* **u"\U0001F680-\U0001F6FF"** *# transport & map symbols* **u"\U0001F1E0-\U0001F1FF"**  *# flags (iOS)* **u"\U00002500-\U00002BEF"** *# chinese char* **u"\U00002702-\U000027B0" u"\U00002702-\U000027B0" u"\U000024C2-\U0001F251" u"\U0001f926-\U0001f937"** 
-
-**u"\U00010000-\U0010ffff"** 
-
-**u"\u2640-\u2642"** 
-
-**u"\u2600-\u2B55"** 
-
-DEPARTMENT OF IT  Page 14 
-
-Fake News Detection ![](Aspose.Words.e79f2849-eb9b-43d2-b2fa-5c70c308d5dd.014.png)
-
-**u"\u200d"** 
-
-**u"\u23cf"** 
-
-**u"\u23e9"** 
-
-**u"\u231a"** 
-
-**u"\ufe0f"**  *# dingbats* **u"\u3030"** 
-
-**"]+"**, flags=re.UNICODE) removeEmoji = emoji\_pattern.sub(**r''**, text) **return** removeEmoji 
-
-example\_text = **"This is a test 😻 "**
-
-print(**f"Original text: {**example\_text**}"**) 
-
-print(**f"Removed emoji: {**remove\_emoji(example\_text)**}"**) 
-
-output : 
-
-Original text: This is a test  Removed emoji: This is a test 
-
-**Punctuation Removal** 
-
-**import** string 
-
-**def** remove\_punctuation(text): 
-
-**return** text.translate(str.maketrans(**''**, **''**, string.punctuation)) 
-
-example\_text = **'i love gaming, programming, and what more ? .'** print(remove\_punctuation(example\_text)) 
-
-output : i love gaming programming and what more 
-
-DEPARTMENT OF IT  Page 15 
-
-Fake News Detection ![](Aspose.Words.e79f2849-eb9b-43d2-b2fa-5c70c308d5dd.016.png)
 
 **Stop words removal** 
 
@@ -459,47 +222,7 @@ Removal of stop words definitely reduces the dataset size and thus reduces the t
 
 We do not always remove the stop words. The removal of stop words is highly dependent on the task we are performing and the goal we want to achieve. 
 
-**from** nltk.corpus **import** stopwords **from** nltk **import** word\_tokenize 
 
-nltk.download(**"stopwords"**) 
-
-**def** remove\_stopwords(text): 
-
-removed = [] 
-
-stop\_words = list(stopwords.words(**"english"**)) tokens = word\_tokenize(text) 
-
-**for** i **in** range(len(tokens)): 
-
-**if** tokens[i] **not in** stop\_words: 
-
-removed.append(tokens[i]) 
-
-**return " "**.join(removed) 
-
-example\_text = **'The movie was not good at all.'** print(remove\_stopwords(example\_text)) 
-
-output : movie good 
-
-DEPARTMENT OF IT  Page 16 
-
-Fake News Detection ![](Aspose.Words.e79f2849-eb9b-43d2-b2fa-5c70c308d5dd.003.png)
-
-**Removal of extra white space** 
-
-**def** remove\_extra\_white\_spaces(text): 
-
-single\_char\_pattern = **r'\s+[a-zA-Z]\s+'** 
-
-without\_sc = re.sub(pattern=single\_char\_pattern, repl=**" "**, string=text) **return** without\_sc 
-
-example\_text = **'i love  food  it makes me happy'** print(remove\_extra\_white\_spaces(example\_text)) output : i love food it makes me happy 
-
-So these were some of the most important text cleaning/pre-processing techniques which are applied on raw text data 
-
-DEPARTMENT OF IT  Page 17 
-
-Fake News Detection ![](Aspose.Words.e79f2849-eb9b-43d2-b2fa-5c70c308d5dd.017.png)
 
 **3.3-Vectorization** 
 
@@ -521,10 +244,6 @@ sample\_text = 'My name is Yash' vectorized\_text = [123, 32, 15, 107]
 
 In this Project we use Count Vectorization and N-Gram Vectorization.Let us discuss about this two Techniques 
 
-DEPARTMENT OF IT  Page 18 
-
-Fake News Detection ![](Aspose.Words.e79f2849-eb9b-43d2-b2fa-5c70c308d5dd.004.png)
-
 **Count Vectorization Technique :-** 
 
 It is the simplest of all vectorization techniques. 
@@ -532,29 +251,6 @@ It is the simplest of all vectorization techniques.
 - It creates a **Document Term Matrix**, now a doc-term matrix is a matrix whose **rows** are every single element our list, for example, we have **4** elements/docs in our ‘sample\_text’, **columns** are all the unique words from our whole document/whole ‘sample\_text’. Each cell of our Doc-Term matrix represents the **frequency** of that word in current cell. 
 - Now let’s code what we discussed above ! (It’s really simple!). 
 
-cv = CountVectorizer() 
-
-X = cv.fit\_transform(sample\_text) X = X.toarray() 
-
-print(X.shape) print(X) 
-
-Output: (4, 20) 
-
-[[0 0 0 0 0 0 0 1 1 0 1 1 0 0 0 0 0 0 1 0] 
-
-[1 0 0 1 0 1 1 0 0 0 1 0 1 0 0 0 0 0 0 1] [0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 1 1 0 0] [0 1 1 0 0 0 0 1 0 0 1 0 0 1 0 1 0 0 0 0]] 
-
-Let’s also print out the unique words:- 
-
-cols = cv.get\_feature\_names() print(cols) 
-
-[**'am'**,**'badminton'**,**'favourite'**,**'final'**,**'games'**,**'graduation'**,**'in'**,**'is'**,**'kelkar'**,**'like'**,**'my'**,**'name'**,**'of'**, **'outdoor'**,**'play'**,**'sport'**,**'to'**,**'video'**,**'yash'**,**'year'**] 
-
-As you can see, we had 4 documents in our ‘sample\_text’ and the Count Vectorization technique has calculated 20 unique words from our whole documents, so therefore the shape : (4, 20). Now Each cell represents the frequency of that word, for example lets say for the cell row1 and col1 we have 0, this 0 represents that in our first doc i.e. ‘My name is Yash Kelkar’, ‘My’ word is not a unique word (we can verify this from above), so that is why it’s 0. Similarly for all the docs and words the process goes same. Hence we have our Count Vectorized matrix ready to be fed into our Machine Learning model. 
-
-DEPARTMENT OF IT  Page 19 
-
-Fake News Detection ![](Aspose.Words.e79f2849-eb9b-43d2-b2fa-5c70c308d5dd.018.png)
 
 **N-gram Vectorization Technique :-** 
 
@@ -570,51 +266,7 @@ When n = 1, it is called Uni-gram, which is basically Count Vectorizer. Example 
 
 When n = 3, it is called Tri-gram, Example = “my name is”, “yash”. 
 
-So now let’s discuss the code 
 
-ngram = CountVectorizer(ngram\_range=(1,3)) *# (1,3) means we will consider all grams i.e. uni, bi and tri.* 
-
-X = ngram.fit\_transform(sample\_text) *# returns a sparse matrix, so we need to convert it to array.* 
-
-X = X.toarray() 
-
-print(X.shape) print(X) 
-
-Output: 
-
-(4, 54) 
-
-[[0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 1 1 1 0 0 0 1 0 0 0 0 1 1 1 1 1 0 0 0 
-
-0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 0 0 0] 
-
-[1 1 1 0 0 0 0 1 1 1 0 1 1 1 1 0 0 0 0 0 0 0 0 1 0 0 1 1 0 0 0 0 0 1 1 0 
-
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 1] 
-
-[0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 1 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 
-
-0 0 1 1 1 0 0 0 1 1 1 1 1 0 0 0 0 0] 
-
-[0 0 0 1 1 1 1 0 0 0 0 0 0 0 0 1 1 0 0 0 0 0 0 1 1 1 0 0 0 0 0 0 0 0 0 1 
-
-1 1 0 0 0 1 1 1 0 0 0 0 0 0 0 0 0 0]] 
-
-As you can see, it creates a combination of 54 grams, so let’s take a look at these n-grams created. 
-
-ngrams = ngram.get\_feature\_names() print(ngrams) 
-
-DEPARTMENT OF IT  Page 20 
-
-Fake News Detection ![](Aspose.Words.e79f2849-eb9b-43d2-b2fa-5c70c308d5dd.019.png)
-
-[**'am'**, **'am in'**, **'am in my'**, **'badminton'**, **'favourite'**, **'favourite outdoor'**, **'favourite outdoor sport'**, **'final'**, **'final year'**, **'final year of'**, **'games'**, **'graduation'**, **'in'**, **'in my'**, **'in my final'**, **'is'**, **'is badminton'**, **'is yash'**, **'is yash kelkar'**, **'kelkar'**, **'like'**, **'like to'**, **'like to play'**, **'my'**, **'my favourite'**, **'my favourite outdoor'**, **'my final'**, **'my final year'**, **'my name'**, **'my name is'**, **'name'**, **'name is'**, **'name is yash'**, **'of'**, **'of graduation'**, **'outdoor'**, **'outdoor sport'**, **'outdoor sport is'**, **'play'**, **'play video'**, **'play video games'**, **'sport'**, **'sport is'**, **'sport is badminton'**, **'to'**, **'to play'**, **'to play video'**, **'video'**, **'video games'**, **'yash'**, **'yash kelkar'**, **'year'**, **'year of'**, **'year of graduation'**] 
-
-So,this was our n-grams and ‘X’ our n-gram doc-term matrix which is ready to be fed in our Machine Learning Model 
-
-DEPARTMENT OF IT  Page 21 
-
-Fake News Detection ![](Aspose.Words.e79f2849-eb9b-43d2-b2fa-5c70c308d5dd.020.png)
 
 **3.4-Machine Learning** 
 
@@ -736,7 +388,6 @@ Indexing and slicing NumPy arrays works very similarly to working with Python li
 
 or array[2:] to return from the 2nd index until the end of the array. array[:,1] will return the elements at index 1 on all rows. 
 
-DEPARTMENT OF IT  Page 26 
 
 Fake News Detection ![](Aspose.Words.e79f2849-eb9b-43d2-b2fa-5c70c308d5dd.023.png)
 
@@ -763,7 +414,6 @@ There are, of course, commands to add and remove elements from NumPy arrays:
 - np.delete(array, 4, axis=0)will delete row on index 4 of array 
 - np.delete(array, 5, axis=1) will delete column on index 5 of array 
 
-DEPARTMENT OF IT  Page 27 
 
 Fake News Detection ![](Aspose.Words.e79f2849-eb9b-43d2-b2fa-5c70c308d5dd.020.png)
 
@@ -791,7 +441,7 @@ You can also get NumPy to return different values from the array, like:
 - np.sqrt(array) will return the square root of each element in the array 
 - np.sin(array) will return the sine of each element in the array 
 
-DEPARTMENT OF IT  Page 28 
+
 
 Fake News Detection ![](Aspose.Words.e79f2849-eb9b-43d2-b2fa-5c70c308d5dd.024.png)
 
@@ -801,393 +451,10 @@ Fake News Detection ![](Aspose.Words.e79f2849-eb9b-43d2-b2fa-5c70c308d5dd.024.pn
 
 It is possible to round different values in array: np.ceil(array) will round up to the nearest integer, np.floor(array) will round down to the nearest integer and np.round(array) will round to the nearest integer. 
 
-DEPARTMENT OF IT  Page 29 
+
 
 |<p>Fake News Detection </p><p>**4.2-Pandas** </p><p>What is Pandas? </p><p>Pandas is a Python library used for working with data sets. </p><p>It has functions for analyzing, cleaning, exploring, and manipulating data. </p><p>The name "Pandas" has a reference to both "Panel Data", and "Python Data Analysis" and was created by Wes McKinney in 2008. </p><p>Why Use Pandas? </p><p>Pandas allows us to analyze big data and make conclusions based on statistical theories. Pandas can clean messy data sets, and make them readable and relevant. </p><p>Relevant data is very important in data science. </p><p>All properties and methods of the DataFrame object, with explanations and examples: </p>|
-| - |
-|**Property/Method  Description** |
-||
-|[abs() ](https://www.w3schools.com/python/pandas/ref_df_abs.asp) Return a DataFrame with the absolute value of each value |
-||
-|[add() ](https://www.w3schools.com/python/pandas/ref_df_add.asp) Adds the values of a DataFrame with the specified value(s) |
-||
-|[add_prefix() ](https://www.w3schools.com/python/pandas/ref_df_add_prefix.asp) Prefix all labels |
-||
-|[add_suffix() ](https://www.w3schools.com/python/pandas/ref_df_add_suffix.asp) Suffix all labels |
-||
-|[agg() ](https://www.w3schools.com/python/pandas/ref_df_agg.asp) Apply a function or a function name to one of |
-||
-|DEPARTMENT OF IT  Page 30 |
 
-
-||Fake News Detection |||
-| :- | - | :- | :- |
-||||
-|||||
-||||the axis of the DataFrame |
-|||||
-|||||
-||[aggregate() ](https://www.w3schools.com/python/pandas/ref_df_aggregate.asp)||Apply a function or a function name to one of |
-||||the axis of the DataFrame |
-|||||
-|||||
-||align() ||Aligns two DataFrames with a specified join method |
-|||||
-|||||
-||[all() ](https://www.w3schools.com/python/pandas/ref_df_all.asp)||Return True if all values in the DataFrame are True , otherwise False |
-|||||
-|||||
-||[any() ](https://www.w3schools.com/python/pandas/ref_df_any.asp)||Returns True if any of the values in the DataFrame |
-|||||
-||||are True, otherwise False |
-|||||
-||[append() ](https://www.w3schools.com/python/pandas/ref_df_append.asp)||Append new columns |
-|||||
-|||||
-||[applymap() ](https://www.w3schools.com/python/pandas/ref_df_applymap.asp)||Execute a function for each element in the DataFrame |
-|||||
-|||||
-||[apply() ](https://www.w3schools.com/python/pandas/ref_df_apply.asp)||Apply a function to one of the axis of the DataFrame |
-|||||
-|||||
-||[assign() ](https://www.w3schools.com/python/pandas/ref_df_assign.asp)||Assign new columns |
-|||||
-|||||
-||[astype() ](https://www.w3schools.com/python/pandas/ref_df_astype.asp)||Convert the DataFrame into a specified dtype |
-|||||
-|||||
-||[at ](https://www.w3schools.com/python/pandas/ref_df_at.asp)||Get or set the value of the item with the specified label |
-|||||
-|||||
-|||||
-||DEPARTMENT OF IT ||Page 31 |
-
-
-||Fake News Detection ||
-| :- | - | :- |
-|||
-||||
-||[axes ](https://www.w3schools.com/python/pandas/ref_df_axes.asp)|Returns the labels of the rows and the column |
-|||s of the DataFrame |
-||||
-||||
-||[bfill() ](https://www.w3schools.com/python/pandas/ref_df_bfill.asp)|Replaces NULL values with the value from the next row |
-||||
-||||
-||[bool() ](https://www.w3schools.com/python/pandas/ref_df_bool.asp)|Returns the Boolean value of the DataFrame |
-||||
-||||
-||[columns ](https://www.w3schools.com/python/pandas/ref_df_columns.asp)|Returns the column labels of the DataFrame |
-||||
-||||
-||[combine() ](https://www.w3schools.com/python/pandas/ref_df_combine.asp)|Compare the values in two DataFrames, and let |
-|||a function decide which values |
-|||to keep |
-||||
-||||
-||[combine_first() ](https://www.w3schools.com/python/pandas/ref_df_combine_first.asp)|Compare two DataFrames, and if the first DataFrame |
-|||
-|||has a NULL value, it will be filled |
-|||with the respective value from the second DataFrame |
-||||
-||compare() |Compare two DataFrames and return the differences|
-||||
-||||
-||[convert_dtypes() ](https://www.w3schools.com/python/pandas/ref_df_convert_dtypes.asp)|Converts the columns in the DataFrame into new dtypes |
-||||
-||||
-||[corr() ](https://www.w3schools.com/python/pandas/ref_df_corr.asp)|Find the correlation (relationship) between each column |
-||||
-||||
-||[count() ](https://www.w3schools.com/python/pandas/ref_df_count.asp)|Returns the number of not empty cells for each column/row |
-||||
-||||
-||||
-||DEPARTMENT OF IT |Page 32 |
-
-
-||Fake News Detection |||
-| :- | - | :- | :- |
-||||
-|||||
-||[cov() ](https://www.w3schools.com/python/pandas/ref_df_cov.asp)||Find the covariance of the columns |
-|||||
-|||||
-||[copy() ](https://www.w3schools.com/python/pandas/ref_df_copy.asp)||Returns a copy of the DataFrame |
-|||||
-|||||
-||[cummax() ](https://www.w3schools.com/python/pandas/ref_df_cummax.asp)||Calculate the cumulative maximum values of the DataFrame |
-|||||
-|||||
-||[cummin() ](https://www.w3schools.com/python/pandas/ref_df_cummin.asp)||Calculate the cumulative minmum values of the DataFrame |
-|||||
-|||||
-||[cumprod() ](https://www.w3schools.com/python/pandas/ref_df_cumprod.asp)||Calculate the cumulative product over the DataFram|
-|||||
-|||||
-||[cumsum() ](https://www.w3schools.com/python/pandas/ref_df_cumsum.asp)||Calculate the cumulative sum over the DataFrame |
-|||||
-|||||
-||[describe() ](https://www.w3schools.com/python/pandas/ref_df_describe.asp)||Returns a description summary for each |
-||||column in the DataFrame |
-|||||
-|||||
-||[diff() ](https://www.w3schools.com/python/pandas/ref_df_diff.asp)||Calculate the difference between a value and the value |
-||||of the same column in the |
-||||previous row |
-|||||
-||[div() ](https://www.w3schools.com/python/pandas/ref_df_div.asp)||Divides the values of a DataFrame with the specified|
-||||value(s) |
-|||||
-|||||
-||[dot() ](https://www.w3schools.com/python/pandas/ref_df_dot.asp)||Multiplies the values of a DataFrame with values fro|
-|||||
-||||another array-like object, |
-||||and add the result |
-|||||
-|||||
-||DEPARTMENT OF IT ||Page 33 |
-
-e
-
-m
-
-||Fake News Detection |||
-| :- | - | :- | :- |
-||||
-|||||
-||[drop() ](https://www.w3schools.com/python/pandas/ref_df_drop.asp)||Drops the specified rows/columns from the DataFrame |
-|||||
-|||||
-||[drop_duplicates() ](https://www.w3schools.com/python/pandas/ref_df_drop_duplicates.asp)||Drops duplicate values from the DataFrame |
-|||||
-|||||
-||[droplevel() ](https://www.w3schools.com/python/pandas/ref_df_droplevel.asp)||Drops the specified index/column(s) |
-|||||
-|||||
-||[dropna() ](https://www.w3schools.com/python/pandas/ref_df_dropna.asp)||Drops all rows that contains NULL values |
-|||||
-|||||
-||[dtypes ](https://www.w3schools.com/python/pandas/ref_df_dtypes.asp)||Returns the dtypes of the columns of the DataFrame|
-|||||
-|||||
-||[duplicated() ](https://www.w3schools.com/python/pandas/ref_df_duplicated.asp)||Returns True for duplicated rows, otherwise False |
-|||||
-|||||
-||[empty ](https://www.w3schools.com/python/pandas/ref_df_empty.asp)||Returns True if the DataFrame is empty, otherwise False |
-|||||
-|||||
-||[eq() ](https://www.w3schools.com/python/pandas/ref_df_eq.asp)||Returns True for values that are equal to the |
-|||||
-||||specified value(s), otherwise False |
-|||||
-||[equals() ](https://www.w3schools.com/python/pandas/ref_df_equals.asp)||Returns True if two DataFrames are equal, otherwise False |
-|||||
-|||||
-||[eval ](https://www.w3schools.com/python/pandas/ref_df_eval.asp)||Evaluate a specified string |
-|||||
-|||||
-||[explode() ](https://www.w3schools.com/python/pandas/ref_df_explode.asp)||Converts each element into a row |
-|||||
-|||||
-||[ffill() ](https://www.w3schools.com/python/pandas/ref_df_ffill.asp)||Replaces NULL values with the value from the previous row |
-|||||
-|||||
-|||||
-||DEPARTMENT OF IT ||Page 34 |
-
-
-||Fake News Detection |||
-| :- | - | :- | :- |
-||||
-|||||
-||[fillna() ](https://www.w3schools.com/python/pandas/ref_df_fillna.asp)||Replaces NULL values with the specified value |
-|||||
-|||||
-||[filter() ](https://www.w3schools.com/python/pandas/ref_df_filter.asp)||Filter the DataFrame according to the specified filter|
-|||||
-|||||
-||[first() ](https://www.w3schools.com/python/pandas/ref_df_first.asp)||Returns the first rows of a specified date selection |
-|||||
-|||||
-||[floordiv() ](https://www.w3schools.com/python/pandas/ref_df_floordiv.asp)||Divides the values of a DataFrame with the specified|
-|||||
-||||value(s), and |
-||||floor the values |
-|||||
-||[ge() ](https://www.w3schools.com/python/pandas/ref_df_ge.asp)||Returns True for values greater than, or equal to the|
-||||specified value(s), otherwise |
-||||False |
-|||||
-|||||
-||[get() ](https://www.w3schools.com/python/pandas/ref_df_get.asp)||Returns the item of the specified key |
-|||||
-|||||
-||[groupby() ](https://www.w3schools.com/python/pandas/ref_df_groupby.asp)||Groups the rows/columns into specified groups |
-|||||
-|||||
-||[gt() ](https://www.w3schools.com/python/pandas/ref_df_gt.asp)||Returns True for values greater than the |
-|||||
-||||specified value(s |
-||||), otherwise False |
-|||||
-||[head() ](https://www.w3schools.com/python/pandas/ref_df_head.asp)||Returns the header row and the first 10 rows, |
-||||or the specified |
-||||number of rows |
-|||||
-|||||
-||DEPARTMENT OF IT ||Page 35 |
-
-
-||Fake News Detection ||
-| :- | - | :- |
-|||
-||||
-||||
-||[iat ](https://www.w3schools.com/python/pandas/ref_df_iat.asp)|Get or set the value of the item in the |
-|||
-|||specified position |
-||||
-||[idxmax() ](https://www.w3schools.com/python/pandas/ref_df_idxmax.asp)|Returns the label of the max value in the s |
-|||pecified axis |
-||||
-||||
-||[idxmin() ](https://www.w3schools.com/python/pandas/ref_df_idxmin.asp)|Returns the label of the min value in the |
-|||
-|||specified axis |
-||||
-||[iloc ](https://www.w3schools.com/python/pandas/ref_df_iloc.asp)|Get or set the values of a group of elements in the |
-|||specified positions |
-||||
-||||
-||[index ](https://www.w3schools.com/python/pandas/ref_df_index.asp)|Returns the row labels of the DataFrame |
-||||
-||||
-||[infer_objects() ](https://www.w3schools.com/python/pandas/ref_df_infer_objects.asp)|Change the dtype of the columns in the DataFrame |
-||||
-||||
-||[info() ](https://www.w3schools.com/python/pandas/ref_df_info.asp)|Prints information about the DataFrame |
-||||
-||||
-||[insert() ](https://www.w3schools.com/python/pandas/ref_df_insert.asp)|Insert a column in the DataFrame |
-||||
-||||
-||[interpolate() ](https://www.w3schools.com/python/pandas/ref_df_interpolate.asp)|Replaces not-a-number values with the |
-|||
-|||interpolated method |
-||||
-||[isin() ](https://www.w3schools.com/python/pandas/ref_df_isin.asp)|Returns True if each elements in the |
-|||DataFrame is in the |
-||||
-||||
-||DEPARTMENT OF IT |Page 36 |
-
-
-||Fake News Detection ||
-| :- | - | :- |
-|||
-||||
-|||specified value |
-||||
-||||
-||[isna() ](https://www.w3schools.com/python/pandas/ref_df_isna.asp)|Finds not-a-number values |
-||||
-||||
-||[isnull() ](https://www.w3schools.com/python/pandas/ref_df_isnull.asp)|Finds NULL values |
-||||
-||||
-||[items() ](https://www.w3schools.com/python/pandas/ref_df_items.asp)|Iterate over the columns of the DataFrame |
-||||
-||||
-||[iteritems() ](https://www.w3schools.com/python/pandas/ref_df_iteritems.asp)|Iterate over the columns of the DataFrame |
-||||
-||||
-||[iterrows() ](https://www.w3schools.com/python/pandas/ref_df_iterrows.asp)|Iterate over the rows of the DataFrame |
-||||
-||||
-||[itertuples() ](https://www.w3schools.com/python/pandas/ref_df_itertuples.asp)|Iterate over the rows as named tuples |
-||||
-||||
-||[join() ](https://www.w3schools.com/python/pandas/ref_df_join.asp)|Join columns of another DataFrame |
-||||
-||||
-||[last() ](https://www.w3schools.com/python/pandas/ref_df_last.asp)|Returns the last rows of a specified date selection |
-||||
-||||
-||[le() ](https://www.w3schools.com/python/pandas/ref_df_le.asp)|Returns True for values less than, or equal |
-|||
-|||to the specified value(s), otherwise |
-|||False |
-||||
-||[loc ](https://www.w3schools.com/python/pandas/ref_df_loc.asp)|Get or set the value of a group of elements |
-|||specified using |
-|||their labels |
-||||
-||||
-||DEPARTMENT OF IT |Page 37 |
-
-
-||Fake News Detection ||
-| :- | - | :- |
-|||
-||||
-||||
-||[lt() ](https://www.w3schools.com/python/pandas/ref_df_lt.asp)|Returns True for values less than the |
-|||
-|||specified value(s), |
-|||otherwise False |
-||||
-||[keys() ](https://www.w3schools.com/python/pandas/ref_df_keys.asp)|Returns the keys of the info axis |
-||||
-||||
-||kurtosis() |Returns the kurtosis of the values in the specified axis |
-||||
-||||
-||[mask() ](https://www.w3schools.com/python/pandas/ref_df_mask.asp)|Replace all values where the specified condition is True |
-||||
-||||
-||[max() ](https://www.w3schools.com/python/pandas/ref_df_max.asp)|Return the max of the values in the specified axis |
-||||
-||||
-||[mean() ](https://www.w3schools.com/python/pandas/ref_df_mean.asp)|Return the mean of the values in the specified axis |
-||||
-||||
-||[median() ](https://www.w3schools.com/python/pandas/ref_df_median.asp)|Return the median of the values in the specified axis|
-||||
-||||
-||[melt() ](https://www.w3schools.com/python/pandas/ref_df_melt.asp)|Reshape the DataFrame from a wide table |
-|||to a long table |
-||||
-||||
-||[memory_usage() ](https://www.w3schools.com/python/pandas/ref_df_memory_usage.asp)|Returns the memory usage of each column |
-||||
-||||
-||[merge() ](https://www.w3schools.com/python/pandas/ref_df_merge.asp)|Merge DataFrame objects |
-||||
-||||
-||[min() ](https://www.w3schools.com/python/pandas/ref_df_min.asp)|Returns the min of the values in the specified axis |
-||||
-||||
-||||
-||DEPARTMENT OF IT |Page 38 |
-
-Fake News Detection ![](Aspose.Words.e79f2849-eb9b-43d2-b2fa-5c70c308d5dd.025.png)
-
-[mod() ](https://www.w3schools.com/python/pandas/ref_df_mod.asp) Modules (find the remainder) of the 
-
-values of a DataFrame 
-
-[mode() ](https://www.w3schools.com/python/pandas/ref_df_mode.asp) Returns the mode of the values in
-
-[mul() ](https://www.w3schools.com/python/pandas/ref_df_mul.asp) Multiplies the values of a DataFrame with 
-
-the
-
-value(s) 
-
-[ndim ](https://www.w3schools.com/python/pandas/ref_df_ndim.asp) Returns the 
-
-Fake News Detection ![](Aspose.Words.e79f2849-eb9b-43d2-b2fa-5c70c308d5dd.004.png)
 
 **4.3-Matplotlib** 
 
