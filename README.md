@@ -8,52 +8,7 @@
 
 `     `By using those properties,we traina combination of different machine learning algorithms using Various ensemble methods and evaluate their performance on 4 real world data sets. Experimental evalu- ation confirms the superior performance of our proposed ensemble learner approach in comparison to in – dividual learners. 
 
-**LIST OF CONTENTS** 
-
-**CONTENT PAGE NO.**
-
-1. INTRODUCTION  1-3 1.1-INTRODUCTION TO PROJECT 
-
-1.2-EXISTING SYSTEM 
-
-1.3-PROPOSED SYSTEM 
-
-1.4-OBJECTIVE 
-
-1.5-HARDWARE REQUIREMENTS 
-
-1.6-SOFTWARE REQUIREMENTS 
-
-2. NATURAL  LANGUAGE PROCESSING  4-5 2.1-INTRODUCTION TO NLP 
-
-2.2-NLTK 
-
-3. NLP PIPELINE  6-22 3.1-TOKENIZATION 
-
-3.2-TEXT CLEANING 
-
-3.3-VECTORIZATION 
-
-3.4-MACHINE LEARNING 
-
-4. LIBRARIES  23-41 4.1-NUMPY 
-
-4.2-PANDAS 4.3-MATPLOTLIB 4.4-SEABORN 4.5-SCIKIT LEARN 
-
-5. MACHINE LEARNING  ALORITHMS  42-43 5.1-NAIVE BAYES ALGORITHM 
-
-5.2-PASSIVE AGGRESSIVE ALGORITHM 
-
-6. DATA FLOW DIAGRAM  44-45 
-6. IMPLEMENTATION  46-47 7.1-PSEUDO CODE 
-
-7.2-OUTPUTS 
-
-8. CONCLUSION  48
-
-**LIST OF FIGURES** 
-
-**FIG 1.1  6 FIG 1.2  44 FIG 1.3                                                                                                            47**
+*                                                                                                            47**
 
 **ABBREVIATIONS** 
 
