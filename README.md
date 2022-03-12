@@ -24,24 +24,14 @@
 
 ### 1.3-Proposed System
 
->**News Authenticator** 
->New authenticator  follows some  steps to check whether the news is true or false. It will compare news which  is  given by our side with different websites and various news sources if that news 
-
-is found on any news website then it shows the given news is true, else it shows there has been 
-
-no such news in last few days. This can help us from fake news.  These  days‟  fake  news  spread 
-
-very fast because of social  media  and  the internet.  So,  news  authenticator  helps  us  to 
-
-detect either the given news is fake or real. 
-
-**News Suggestion / Recommendation System** 
-
+>**News Authenticator** <br>
+New authenticator  follows some  steps to check whether the news is true or false. It will compare news which  is  given by our side with different websites and various news sources if that news is found on any news website then it shows the given news is true, else it shows there has been no such news in last few days. This can help us from fake news.  These  days‟  fake  news  spread very fast because of social  media  and  the internet.  So,  news  authenticator  helps us to detect either the given news is fake or real. <br><br>
+>**News Suggestion / Recommendation System** <br>
 News suggestion suggests recent news and suggests the news related to the news which the user has given for authentication . If the news is fake, then this news suggestion gives the related news on that topic. The news suggestion suggests the news based on keywords which you give in your news based on keywords which you give in your news based on keywords which you give in your news which you wish to authenticate 
 
-**1.4-Objective** 
+### 1.4-Objective
 
-The main objective is to detect the fake news, which is a classic text classification problem with a straight forward proposition. It is needed to build a model that can differentiate between “Real” news and “Fake” news. This leads to consequences in social networking sites like content. Secondly, the  trolls  are  real humans who “aim to disrupt online communities” in hopes of provoking social  media users  into an emotional  response.  Other  one  is,  Cyborg. Cyborg users are the combination of “automated activities  with human input.”Humans build accounts and use programs to perform activities in social media. For false information detection, there are two categories: Linguistic Cue and Network Analysis approaches. The methods generally used to do such  type  of  works  are Naïve  Bayes  Classifier  and  Support  Vector Machines (SVM). 
+>The main objective is to detect the fake news, which is a classic text classification problem with a straight forward proposition. It is needed to build a model that can differentiate between “Real” news and “Fake” news. This leads to consequences in social networking sites like content. Secondly, the  trolls  are  real humans who “aim to disrupt online communities” in hopes of provoking social  media users  into an emotional  response.  Other  one  is,  Cyborg. Cyborg users are the combination of “automated activities  with human input.”Humans build accounts and use programs to perform activities in social media. For false information detection, there are two categories: Linguistic Cue and Network Analysis approaches. The methods generally used to do such  type  of  works  are Naïve  Bayes  Classifier  and  Support  Vector Machines (SVM).<br><br> 
 
 
 **2.1-Introduction to Natural Language Processing** 
