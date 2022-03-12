@@ -331,53 +331,13 @@ Explanation: **Tuning** can be defined as the process of improvising the perform
 
 After Model training our Fake news model detects correctly fake news and real news. 
 
-Fake News Detection ![](Aspose.Words.e79f2849-eb9b-43d2-b2fa-5c70c308d5dd.031.png)
 
-7.1-Pseudo Code 
 
-corpus=[] 
 
-sentences=[] 
-
-for i in range(0,len(messages)): 
-
-review=re.sub('[^a-zA-Z]',' ', messages['title'][i]) 
-
-review=review.lower() 
-
-list=review.split() 
-
-review=[ps.stem(word) for word in list if word not in set(stopwords.words('english'))] sentences=' '.join(review) 
-
-corpus.append(sentences) 
-
-from sklearn.feature\_extraction.text import CountVectorizer cv=CountVectorizer(max\_features=5000,ngram\_range=(1,3)) X=cv.fit\_transform(corpus).toarray() 
-
-from sklearn.model\_selection import train\_test\_split 
-
-X\_train, X\_test, y\_train, y\_test=train\_test\_split(X,y,test\_size=0.25, random\_state=42) from sklearn.naive\_bayes import MultinomialNB 
-
-classifier=MultinomialNB() 
-
-classifier.fit(X\_train,y\_train) 
-
-pred=classifier.predict(X\_test) 
-
-from sklearn import metrics 
-
-metrics.accuracy\_score(y\_test,pred) 
-
-Fake News Detection ![](Aspose.Words.e79f2849-eb9b-43d2-b2fa-5c70c308d5dd.032.png)
 
 **7.2-Outputs** 
 
-![](Aspose.Words.e79f2849-eb9b-43d2-b2fa-5c70c308d5dd.033.jpeg)
 
-Fake News Detection ![](Aspose.Words.e79f2849-eb9b-43d2-b2fa-5c70c308d5dd.034.png)
-
-![](Aspose.Words.e79f2849-eb9b-43d2-b2fa-5c70c308d5dd.035.jpeg)
-
-Fake News Detection ![](Aspose.Words.e79f2849-eb9b-43d2-b2fa-5c70c308d5dd.036.png)
 
 ### Future Enhancement 
 >In this Project We use Machine learning algorithms . In future Enhancement We use deep learning algorithms,Advanced NLP Techniques for better accuracy. 
