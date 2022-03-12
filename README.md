@@ -1,46 +1,31 @@
-**ABSTRACT** 
+# ABSTRACT
 
-**FAKE NEWS DETECTION** 
+### FAKE NEWS DETECTION
 
-`                 `The advent of the World Wide Web and the rapid adoption of social media platforms (such as Facebook and Twitter) paved the way for information dissemination that has never been witnessed in the human  history  before  . With the current usage of social media  platforms  ,  consumers are creating and sharing  more information  than ever before , some  of which are misleading with no relevance to  reality. Automated classification of a text article as misinformation or disinformation is a challenging task 
-
-`     `Even an expert in a particular domain has to explore multiple ascepts before giving ascepts be- fore giving a verdict on the truthfulness of an article. In this work, we purpose to use machine learning en semble approach for automated classification of news article. Our study explores different textual propert ies that can be used to distinguish fake contents fom real. 
-
-`     `By using those properties,we traina combination of different machine learning algorithms using Various ensemble methods and evaluate their performance on 4 real world data sets. Experimental evalu- ation confirms the superior performance of our proposed ensemble learner approach in comparison to individual learners. 
+>The advent of the World Wide Web and the rapid adoption of social media platforms (such as Facebook and Twitter) paved the way for information dissemination that has never been witnessed in the human  history  before  . With the current usage of social media  platforms  ,  consumers are creating and sharing  more information  than ever before , some  of which are misleading with no relevance to  reality. Automated classification of a text article as misinformation or disinformation is a challenging task.<br><br> 
+>Even an expert in a particular domain has to explore multiple ascepts before giving ascepts be- fore giving a verdict on the truthfulness of an article. In this work, we purpose to use machine learning en semble approach for automated classification of news article. Our study explores different textual propert ies that can be used to distinguish fake contents fom real. <br><br>
+>By using those properties,we traina combination of different machine learning algorithms using Various ensemble methods and evaluate their performance on 4 real world data sets. Experimental evalu- ation confirms the superior performance of our proposed ensemble learner approach in comparison to individual learners. 
 
                                                                                                      
 
-**ABBREVIATIONS** 
+### 1.1-Introduction To Project
 
-NLP- NATURAL LANGUAGE PROCESSING NLTK- NATURAL LANGUAGE TOOL KIT 
-
-Fake News Detection ![](Aspose.Words.e79f2849-eb9b-43d2-b2fa-5c70c308d5dd.002.png)
-
-**1.1-Introduction To Project** 
-
-The advent of the World Wide Web and the rapid adoption of social media platforms (such as Facebook and Twitter) paved the way for information dissemination that has never been witnessed in the human history before. Besides other use cases, news outlets benefitted from the widespread use of social media platforms by providing updated news in near real time to its subscribers. The news media evolved from newspapers, tabloids, and magazines to a digital form such as online news platforms, blogs, social media feeds, and other digital media formats . It became easier for consumers to acquire the latest news at their fingertips. Facebook referrals account for 70% of traffic to news websites . These social media platforms in their current state are extremely powerful and useful for their ability to allow users to discuss and share ideas and debate over issues such as democracy, education, and health. However, such platforms are also used with a negative perspective by certain entities commonly for monetary gain and in other cases for creating biased opinions, manipulating mindsets, and spreading satire or absurdity. The phenomenon is commonly known as fake news. 
-
-There has been a rapid increase in the spread of fake news in the last decade, most prominently observed in the 2016 US elections . Such proliferation of sharing articles online that do not conform to facts has led to many problems not just limited to politics but covering various other domains such as sports, health, and also science . One such area affected by fake news is the financial markets , where a rumor can have disastrous consequences and may bring the market to a halt. 
-
-Our ability to take a decision relies mostly on the type of information we consume; our world view  is shaped on the basis of information we digest. There is increasing evidence that consumers have reacted absurdly to news that later proved to be fake . One recent case is the spread of novel corona virus, where fake reports spread over the Internet about the origin, nature, and behavior of the virus . The situation worsened as more people read about the fake contents online. Identifying such news online is a daunting task. 
-
-Fortunately, there are a number of computational techniques that can be used to mark certain articles as fake on  the  basis  of  their  textual  content.  Majority  of  these  techniques  use  fact  checking  websites  such  as “PolitiFact” and “Snopes.” There are a number of repositories maintained by researchers that contain lists of websites that are identified as ambiguous and  fake . However, the problem with these resources is that human expertise is required to identify articles/websites as fake. More importantly, the fact checking websites contain articles from particular domains such as politics and are not generalized to identify fake news articles from multiple domains such as entertainment, sports, and technology. 
-
-The World Wide Web contains data in diverse formats such as documents, videos, and audios. News published online in an unstructured format (such as news, articles, videos, and audios) is relatively difficult to detect and classify as this strictly requires human expertise. However, computational techniques such as natural language processing (NLP) can be used to detect anomalies that separate a text article that is deceptive in nature from articles that are based on facts . Other techniques involve the analysis of propagation of fake news in contrast with real news . More specifically, the approach analyzes how a fake news article propagates differently on a network relative to a true article. The response that an article gets can be differentiated at a theoretical level to classify the article as real or fake. 
+>The advent of the World Wide Web and the rapid adoption of social media platforms (such as Facebook and Twitter) paved the way for information dissemination that has never been witnessed in the human history before. Besides other use cases, news outlets benefitted from the widespread use of social media platforms by providing updated news in near real time to its subscribers. The news media evolved from newspapers, tabloids, and magazines to a digital form such as online news platforms, blogs, social media feeds, and other digital media formats . It became easier for consumers to acquire the latest news at their fingertips. Facebook referrals account for 70% of traffic to news websites . These social media platforms in their current state are extremely powerful and useful for their ability to allow users to discuss and share ideas and debate over issues such as democracy, education, and health. However, such platforms are also used with a negative perspective by certain entities commonly for monetary gain and in other cases for creating biased opinions, manipulating mindsets, and spreading satire or absurdity. The phenomenon is commonly known as fake news.<br><br> 
+>There has been a rapid increase in the spread of fake news in the last decade, most prominently observed in the 2016 US elections . Such proliferation of sharing articles online that do not conform to facts has led to many problems not just limited to politics but covering various other domains such as sports, health, and also science . One such area affected by fake news is the financial markets , where a rumor can have disastrous consequences and may bring the market to a halt.<br><br>  
+>Our ability to take a decision relies mostly on the type of information we consume; our world view  is shaped on the basis of information we digest. There is increasing evidence that consumers have reacted absurdly to news that later proved to be fake . One recent case is the spread of novel corona virus, where fake reports spread over the Internet about the origin, nature, and behavior of the virus . The situation worsened as more people read about the fake contents online. Identifying such news online is a daunting task.<br><br>  
+>Fortunately, there are a number of computational techniques that can be used to mark certain articles as fake on  the  basis  of  their  textual  content.  Majority  of  these  techniques  use  fact  checking  websites  such  as “PolitiFact” and “Snopes.” There are a number of repositories maintained by researchers that contain lists of websites that are identified as ambiguous and  fake . However, the problem with these resources is that human expertise is required to identify articles/websites as fake. More importantly, the fact checking websites contain articles from particular domains such as politics and are not generalized to identify fake news articles from multiple domains such as entertainment, sports, and technology.<br><br>  
+>The World Wide Web contains data in diverse formats such as documents, videos, and audios. News published online in an unstructured format (such as news, articles, videos, and audios) is relatively difficult to detect and classify as this strictly requires human expertise. However, computational techniques such as natural language processing (NLP) can be used to detect anomalies that separate a text article that is deceptive in nature from articles that are based on facts . Other techniques involve the analysis of propagation of fake news in contrast with real news . More specifically, the approach analyzes how a fake news article propagates differently on a network relative to a true article. The response that an article gets can be differentiated at a theoretical level to classify the article as real or fake.<br><br>  
 
 
 
-Fake News Detection ![](Aspose.Words.e79f2849-eb9b-43d2-b2fa-5c70c308d5dd.003.png)
+### 1.2-Existing System
 
-**1.2-Existing System** 
+>Using Bag of words,stop words techniques in Natural language processing, and using Machine learning naïve bayes algorithm to get most fake words and most real words .Fake words are having higher negative coefficient it means any sentence or text contain that particular word may have higher chances of being faked... 
 
-Using Bag of words,stop words techniques in Natural language processing, and using Machine learning naïve bayes algorithm to get most fake words and most real words .Fake words are having higher negative coefficient it means any sentence or text contain that particular word may have higher chances of being faked... 
+### 1.3-Proposed System
 
-**1.3-Proposed System** 
-
-**News Authenticator** 
-
-New authenticator  follows some  steps to check whether the news is true or false. It will compare news which  is  given by our side with different websites and various news sources if that news 
+>**News Authenticator** 
+>New authenticator  follows some  steps to check whether the news is true or false. It will compare news which  is  given by our side with different websites and various news sources if that news 
 
 is found on any news website then it shows the given news is true, else it shows there has been 
 
@@ -266,75 +251,7 @@ Fake News Detection ![](Aspose.Words.e79f2849-eb9b-43d2-b2fa-5c70c308d5dd.003.pn
 
 **4-Libraries** 
 
-**4.1-Numpy** 
-NumPy is the fundamental package for scientific computing in Python. It is a Python library that provides a multidimensional array object, various derived objects (such as masked arrays and matrices), and an assortment of routines for fast operations on arrays, including mathematical, logical, shape manipulation, sorting, selecting, I/O, discrete Fourier transforms, basic linear algebra, basic statistical operations, random simulation and much more.
-
-
-**4.2-Matplotlib** 
-
-What is Matplotlib? 
-
-Matplotlib is a low level graph plotting library in python that serves as a visualization utility. Matplotlib was created by John D. Hunter. 
-
-Matplotlib is open source and we can use it freely. 
-
-Matplotlib is mostly written in python, a few segments are written in C, Objective-C and Javascript for Platform compatibility. 
-
-**4.3-Seaborn** 
-
-Seaborn Vs Matplotlib 
-
-It is summarized that if Matplotlib “tries to make easy things easy and hard things possible”, Seaborn tries to make a well-defined set of hard things easy too.” 
-
-Seaborn helps resolve the two major problems faced by Matplotlib; the problems are − 
-
-- Default Matplotlib parameters 
-- Working with data frames 
-
-As Seaborn compliments and extends Matplotlib, the learning curve is quite gradual. If you know Matplotlib, you are already half way through Seaborn. 
-
-**Important Features of Seaborn** 
-
-Seaborn is built on top of Python’s core visualization library Matplotlib. It is meant to serve as a complement, and not a replacement. However, Seaborn comes with some very important features. Let us see a few of them here. The features help in − 
-
-- Built in themes for styling matplotlib graphics 
-- Visualizing univariate and bivariate data 
-- Fitting in and visualizing linear regression models 
-- Plotting statistical time series data 
-- Seaborn works well with NumPy and Pandas data structures 
-- It comes with built in themes for styling Matplotlib graphics 
-
-Fake News Detection ![](Aspose.Words.e79f2849-eb9b-43d2-b2fa-5c70c308d5dd.003.png)
-
-**4.5-Scikit-Learn** 
-
-Scikit-learn is a free machine learning library for Python. It features various algorithms like support vector machine, random forests, and k-neighbours, and it also supports Python numerical and scientific libraries like NumPy and SciPy. 
-
-In this tutorial we will learn to code python and apply Machine Learning with the help of the scikit-learn library, which was created to make doing machine learning in Python easier and more robust. 
-
-To do this, we’ll be using the[ Sales_Win_Loss data s](https://www.ibm.com/communities/analytics/watson-analytics-blog/sales-win-loss-sample-dataset/)et from IBM’s Watson repository. We will import the data set using pandas, explore the data using pandas methods like head(), tail(), dtypes(), and then try our hand at using plotting techniques from Seaborn to visualize our data. 
-
-Then we’ll dive into scikit-learn and use preprocessing.LabelEncoder() in scikit-learn to process the data, 
-
-and train\_test\_split() to split the data set into test and train samples. We will also use a cheat sheet to help us decide which algorithms to use for the data set. Finally we will use three different algorithms (Naive-Bayes, LinearSVC, K-Neighbors Classifier) to make predictions and compare their performance using methods 
-
-like accuracy\_score() provided by the scikit-learn library. We will also visualize the performance score of different models using scikit-learn and Yellowbrick visualization. 
-
-- pandas fundamentals 
-- Seaborn and matplotlib basics 
-
-**Components of scikit-learn:** 
-
-Scikit-learn comes loaded with a lot of features. Here are a few of them to help you understand the spread: 
-
-- **Supervised learning algorithms:** Think of any supervised machine learning algorithm you might have heard about and there is a very high chance that it is part of scikit-learn. Starting from Generalized linear  models  (e.g  Linear  Regression),  Support  Vector  Machines  (SVM),  Decision  Trees  to  Bayesian methods – all of them are part of scikit-learn toolbox. The spread of machine learning algorithms is one of the big reasons for the high usage of scikit-learn. I started using scikit to solve supervised learning problems and would recommend that to people new to scikit / machine learning as well. 
-- **Cross-validation:** There are various methods to check the accuracy of supervised models on unseen data using sklearn. 
-- **Unsupervised learning algorithms:** Again there is a large spread of machine learning algorithms in the offering – starting from clustering, factor analysis, principal component analysis to unsupervised neural networks. 
-- **Various toy datasets:** This came in handy while learning scikit-learn. I had learned SAS using various academic datasets (e.g. IRIS dataset, Boston House prices dataset). Having them handy while learning a new library helped a lot. 
-- **Feature extraction:** Scikit-learn for extracting features from images and text (e.g. Bag of words) 
-
-Fake News Detection ![](Aspose.Words.e79f2849-eb9b-43d2-b2fa-5c70c308d5dd.026.png)
-
+https://numpy.org/doc/stable/ <br><br>
 **5.1-Naive Bayes Algorithm** 
 
 It  is  a [ classification  technique  b](https://courses.analyticsvidhya.com/courses/introduction-to-data-science-2/?utm_source=blog&utm_medium=6stepsnaivebayesarticle)ased  on  Bayes’  Theorem  with  an  assumption  of  independence  among predictors. In simple terms, a Naive Bayes classifier assumes that the presence of a particular feature in a class is unrelated to the presence of any other feature. 
