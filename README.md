@@ -8,7 +8,7 @@
 
 `     `By using those properties,we traina combination of different machine learning algorithms using Various ensemble methods and evaluate their performance on 4 real world data sets. Experimental evalu- ation confirms the superior performance of our proposed ensemble learner approach in comparison to individual learners. 
 
-*                                                                                                        
+                                                                                                     
 
 **ABBREVIATIONS** 
 
@@ -78,7 +78,6 @@ Programming Language: Python and its Libraries Technology : Machine Learning
 
 Coding Platform: Jupyter Notebook 
 
-DEPARTMENT OF IT  Page 3 
 
 Fake News Detection ![](Aspose.Words.e79f2849-eb9b-43d2-b2fa-5c70c308d5dd.005.png)
 
@@ -119,8 +118,6 @@ A *topic model* is one that automatically discovers topics occurring in a collec
 - **Text Classification** :- 
 
 Text clarification is the process of categorizing the text into a group of words. By using NLP, text classification can automatically analyze text and then assign a set of predefined tags or categories based on its context. 
-
-DEPARTMENT OF IT  Page 4 
 
 Fake News Detection ![](Aspose.Words.e79f2849-eb9b-43d2-b2fa-5c70c308d5dd.006.png)
 
@@ -288,8 +285,6 @@ Now the interesting part – **Model Building**
 
 I will be using **Naive Bayes Algorithm** as it considered to be good when dealing with text data. 
 
-DEPARTMENT OF IT  Page 22 
-
 Fake News Detection ![](Aspose.Words.e79f2849-eb9b-43d2-b2fa-5c70c308d5dd.003.png)
 
 **4-Libraries** 
@@ -303,9 +298,7 @@ At the core of the NumPy package, is the *ndarray* object. This encapsulates *n*
 - NumPy arrays have a fixed size at creation, unlike Python lists (which can grow dynamically). Changing the size of an *ndarray* will create a new array and delete the original. 
 - The elements in a NumPy array are all required to be of the same data type, and thus will be the same size in memory. The exception: one can have arrays of (Python, including NumPy) objects, thereby allowing for arrays of different sized elements. 
 - NumPy arrays facilitate advanced mathematical and other types of operations on large numbers of data. Typically, such operations are executed more efficiently and with less code than is possible using Python’s built-in sequences. 
-- A growing plethora of scientific and mathematical Python-based packages are using NumPy arrays; though these typically support Python-sequence input, they convert such input to NumPy arrays prior to processing, and they often output NumPy arrays. In other words, in order to efficiently use much (perhaps even most) of today’s scientific/mathematical Python-based software, just knowing how to use Python’s built-in sequence types is insufficient - one also needs to know how to use NumPy arrays. 
-
-DEPARTMENT OF IT  Page 23 
+- A growing plethora of scientific and mathematical Python-based packages are using NumPy arrays; though these typically support Python-sequence input, they convert such input to NumPy arrays prior to processing, and they often output NumPy arrays. In other words, in order to efficiently use much (perhaps even most) of today’s scientific/mathematical Python-based software, just knowing how to use Python’s built-in sequence types is insufficient - one also needs to know how to use NumPy arrays.  
 
 Fake News Detection ![](Aspose.Words.e79f2849-eb9b-43d2-b2fa-5c70c308d5dd.021.png)
 
@@ -327,8 +320,6 @@ see *basics.broadcasting*.
 Who Else Uses NumPy? 
 
 NumPy fully supports an object-oriented approach, starting, once again, with *ndarray*. For example, *ndarray* is a class, possessing numerous methods and attributes. Many of its methods are mirrored by functions in the outer-most NumPy namespace, allowing the programmer to code in whichever paradigm they prefer. This flexibility has allowed the NumPy array dialect and NumPy *ndarray* class to become the *de-facto* language of multi-dimensional data interchange used in Python. 
-
-DEPARTMENT OF IT  Page 24 
 
 Fake News Detection ![](Aspose.Words.e79f2849-eb9b-43d2-b2fa-5c70c308d5dd.022.png)
 
@@ -354,9 +345,7 @@ The argument inside the brackets are the file name (and path, if needed), the de
 
 You can also save NumPy arrays to files by using np.savetxt(). For 
 
-example, np.savetxt('file.txt',arr,delimiter=' ') will save to a text file and np.savetxt('file.csv',arr,delimiter=',') will save to a CSV file. 
-
-DEPARTMENT OF IT  Page 25 
+example, np.savetxt('file.txt',arr,delimiter=' ') will save to a text file and np.savetxt('file.csv',arr,delimiter=',') will save to a CSV file.  
 
 Fake News Detection ![](Aspose.Words.e79f2849-eb9b-43d2-b2fa-5c70c308d5dd.018.png)
 
