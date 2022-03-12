@@ -379,11 +379,10 @@ Fake News Detection ![](Aspose.Words.e79f2849-eb9b-43d2-b2fa-5c70c308d5dd.034.pn
 
 Fake News Detection ![](Aspose.Words.e79f2849-eb9b-43d2-b2fa-5c70c308d5dd.036.png)
 
-**Future Enhancement** 
+### Future Enhancement 
+>In this Project We use Machine learning algorithms . In future Enhancement We use deep learning algorithms,Advanced NLP Techniques for better accuracy. 
 
-In this Project We use Machine learning algorithms . In future Enhancement We use deep learning algorithms,Advanced NLP Techniques for better accuracy. 
-
-**Conclusion** 
+### Conclusion
 
 >Fake Words are having higher negative coefficient it means any sentence or text contain that particular word may have higher chances of being faked….<br><br> 
 >The task of classifying news manually requires in-depth knowledge of the domain and expertise to identify anomalies in the text. In this research, we discussed the problem of classifying fake news articles using machine learning models and ensemble techniques. The data we used in our work is collected from the World Wide Web and contains news articles from various domains to cover most of the news rather than specifically classifying political news. The primary aim of the research is to identify patterns in text that differentiate fake articles from true news. We extracted different textual features from the articles using an LIWC tool and used the feature set as an input to the models. The learning models were trained and parameter-tuned to obtain optimal accuracy. Some models have achieved comparatively higher accuracy than others. We used multiple performance metrics to compare the results for each algorithm. The ensemble learners have shown an overall better score on all performance metrics as compared to the individual learners.<br><br> 
