@@ -34,7 +34,7 @@ News suggestion suggests recent news and suggests the news related to the news w
 >The main objective is to detect the fake news, which is a classic text classification problem with a straight forward proposition. It is needed to build a model that can differentiate between “Real” news and “Fake” news. This leads to consequences in social networking sites like content. Secondly, the  trolls  are  real humans who “aim to disrupt online communities” in hopes of provoking social  media users  into an emotional  response.  Other  one  is,  Cyborg. Cyborg users are the combination of “automated activities  with human input.”Humans build accounts and use programs to perform activities in social media. For false information detection, there are two categories: Linguistic Cue and Network Analysis approaches. The methods generally used to do such  type  of  works  are Naïve  Bayes  Classifier  and  Support  Vector Machines (SVM).<br><br> 
 
 
-**2.1-Introduction to Natural Language Processing** 
+### 2.1-Introduction to Natural Language Processing
 
 So the first question that comes in our mind is **What is NLP** ? Why is it so important and so much famous these days. 
 
@@ -74,7 +74,7 @@ Text clarification is the process of categorizing the text into a group of words
 
 Fake News Detection ![](Aspose.Words.e79f2849-eb9b-43d2-b2fa-5c70c308d5dd.006.png)
 
-**2.2-NLP ToolKit – NLTK** 
+### 2.2-NLP ToolKit – NLTK
 
 Now that we have some clue about what’s going on and what is Natural Language Processing, we will continue the NLP WITH PYTHON 
 
@@ -100,15 +100,13 @@ Fake News Detection ![](Aspose.Words.e79f2849-eb9b-43d2-b2fa-5c70c308d5dd.007.pn
 
 Whenever we work on *raw text* data, python does not understand words, it just sees a stream of characters and for it, all the characters are same having no meaning. Any Machine Learning algorithm/programming language only understands **Numbers**/**Vectors** and not words so in order to make it understand, we need to perform the above NLP pipeline as shown in the image above. 
 
-![](Aspose.Words.e79f2849-eb9b-43d2-b2fa-5c70c308d5dd.008.jpeg)
-
-Fig 1.1 
 
 
 
-Fake News Detection ![](Aspose.Words.e79f2849-eb9b-43d2-b2fa-5c70c308d5dd.009.png)
 
-**3.1-Tokenization** 
+
+
+### 3.1-Tokenization
 
 Tokenization is simply splitting the text/corpus into words or sentences. from nltk.tokenize import word\_tokenize 
 
@@ -120,7 +118,7 @@ output : [‘Hi’, ‘my’, ‘name’, ‘is’, ‘Yash’]
 
 
 
-**3.2-Text Cleaning** 
+### 3.2-Text Cleaning
 
 Text cleaning basically refers to the functions applied to the raw text **in** order to remove unnecessary words, punctuation, extra white spaces, **and** giving the text more meaning **in** order to be processed by our ML algorithm. 
 
@@ -173,7 +171,7 @@ We do not always remove the stop words. The removal of stop words is highly depe
 
 
 
-**3.3-Vectorization** 
+### 3.3-Vectorization 
 
 As we discussed earlier that in order to make our machine learning algorithm make sense of text data, we need to convert the characters/words/sentences into numbers/vectors. 
 
@@ -217,7 +215,7 @@ When n = 3, it is called Tri-gram, Example = “my name is”, “yash”.
 
 
 
-**3.4-Machine Learning** 
+### 3.4-Machine Learning
 
 After we have successfully converted our raw text data into vectors, we are now ready to feed this vectorized data and it’s corresponding label like Fake or Real in to our machine learning algorithm. 
 
@@ -239,10 +237,12 @@ I will be using **Naive Bayes Algorithm** as it considered to be good when deali
 
 Fake News Detection ![](Aspose.Words.e79f2849-eb9b-43d2-b2fa-5c70c308d5dd.003.png)
 
-**4-Libraries** 
+### 4-Libraries
 
 https://numpy.org/doc/stable/ <br><br>
-**5.1-Naive Bayes Algorithm** 
+
+
+### 5.1-Naive Bayes Algorithm 
 
 It  is  a [ classification  technique  b](https://courses.analyticsvidhya.com/courses/introduction-to-data-science-2/?utm_source=blog&utm_medium=6stepsnaivebayesarticle)ased  on  Bayes’  Theorem  with  an  assumption  of  independence  among predictors. In simple terms, a Naive Bayes classifier assumes that the presence of a particular feature in a class is unrelated to the presence of any other feature. 
 
@@ -252,7 +252,7 @@ Naive Bayes model is easy to build and particularly useful for very large data s
 
 Bayes theorem provides a way of calculating posterior probability P(c|x) from P(c), P(x) and P(x|c). Look at the equation below: 
 
-![](Aspose.Words.e79f2849-eb9b-43d2-b2fa-5c70c308d5dd.027.png)
+
 
 Above, 
 
@@ -261,7 +261,7 @@ Above,
 - *P*(*x|c*) is the likelihood which is the probability of *predictor* given *class*. 
 - *P*(*x*) is the prior probability of *predictor*. 
 
-**5.2-Passive Aggressive Algorithm** 
+### 5.2-Passive Aggressive Algorithm
 
 The Passive-Aggressive algorithms are a family of Machine learning algorithms that are not very well known by beginners and even intermediate Machine Learning enthusiasts. However, they can be very useful and efficient for certain applications. 
 
@@ -279,11 +279,10 @@ Passive-Aggressive algorithms are somewhat similar to a Perceptron model, in the
 
 **Aggressive:** If the prediction is incorrect, make changes to the model. i.e., some change to the model may correct it. 
 
-Fake News Detection ![](Aspose.Words.e79f2849-eb9b-43d2-b2fa-5c70c308d5dd.026.png)
 
 **Data Flow Diagram** 
 
-![](Aspose.Words.e79f2849-eb9b-43d2-b2fa-5c70c308d5dd.029.jpeg)
+
 
 In This Project we collect data set From Kaggle website 
 
@@ -325,7 +324,7 @@ After Model training our Fake news model detects correctly fake news and real ne
 
 
 
-**7.2-Outputs** 
+### 7.2-Outputs 
 
 
 
