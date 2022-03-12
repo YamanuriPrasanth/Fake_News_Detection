@@ -280,7 +280,9 @@ Passive-Aggressive algorithms are somewhat similar to a Perceptron model, in the
 **Aggressive:** If the prediction is incorrect, make changes to the model. i.e., some change to the model may correct it. 
 
 
-**Data Flow Diagram** 
+### Data Flow Diagram
+
+![download](https://user-images.githubusercontent.com/54884765/158026515-06f3dc88-7816-42b3-bfff-61fbfce2ea4e.png)
 
 
 
