@@ -59,28 +59,6 @@ News suggestion suggests recent news and suggests the news related to the news w
 The main objective is to detect the fake news, which is a classic text classification problem with a straight forward proposition. It is needed to build a model that can differentiate between “Real” news and “Fake” news. This leads to consequences in social networking sites like content. Secondly, the  trolls  are  real humans who “aim to disrupt online communities” in hopes of provoking social  media users  into an emotional  response.  Other  one  is,  Cyborg. Cyborg users are the combination of “automated activities  with human input.”Humans build accounts and use programs to perform activities in social media. For false information detection, there are two categories: Linguistic Cue and Network Analysis approaches. The methods generally used to do such  type  of  works  are Naïve  Bayes  Classifier  and  Support  Vector Machines (SVM). 
 
 
-
-Fake News Detection ![](Aspose.Words.e79f2849-eb9b-43d2-b2fa-5c70c308d5dd.004.png)
-
-**1.5-Hardware Requirements** 
-
-Processor : Ryzen 5 or intel 5 and above RAM: 1 GB or above 
-
-Hard Disk : 10 GB HDD 
-
-Graphics Card: Nvidia GTX 1650 and above 
-
-**1.6-Software Requirements** 
-
-Operating system  : Windows 10 
-
-Programming Language: Python and its Libraries Technology : Machine Learning 
-
-Coding Platform: Jupyter Notebook 
-
-
-Fake News Detection ![](Aspose.Words.e79f2849-eb9b-43d2-b2fa-5c70c308d5dd.005.png)
-
 **2.1-Introduction to Natural Language Processing** 
 
 So the first question that comes in our mind is **What is NLP** ? Why is it so important and so much famous these days. 
@@ -166,7 +144,6 @@ print(tokenized\_text)
 output : [‘Hi’, ‘my’, ‘name’, ‘is’, ‘Yash’] 
 
 
-Fake News Detection ![](Aspose.Words.e79f2849-eb9b-43d2-b2fa-5c70c308d5dd.010.png)
 
 **3.2-Text Cleaning** 
 
@@ -290,162 +267,10 @@ Fake News Detection ![](Aspose.Words.e79f2849-eb9b-43d2-b2fa-5c70c308d5dd.003.pn
 **4-Libraries** 
 
 **4.1-Numpy** 
+NumPy is the fundamental package for scientific computing in Python. It is a Python library that provides a multidimensional array object, various derived objects (such as masked arrays and matrices), and an assortment of routines for fast operations on arrays, including mathematical, logical, shape manipulation, sorting, selecting, I/O, discrete Fourier transforms, basic linear algebra, basic statistical operations, random simulation and much more.
 
-NumPy is the fundamental package for scientific computing in Python. It is a Python library that provides a multidimensional array object, various derived objects (such as masked arrays and matrices), and an assortment of routines for fast operations on arrays, including mathematical, logical, shape manipulation, sorting, selecting, I/O, discrete Fourier transforms, basic linear algebra, basic statistical operations, random simulation and much more. 
 
-At the core of the NumPy package, is the *ndarray* object. This encapsulates *n*-dimensional arrays of homogeneous data types, with many operations being performed in compiled code for performance. There are several important differences between NumPy arrays and the standard Python sequences: 
-
-- NumPy arrays have a fixed size at creation, unlike Python lists (which can grow dynamically). Changing the size of an *ndarray* will create a new array and delete the original. 
-- The elements in a NumPy array are all required to be of the same data type, and thus will be the same size in memory. The exception: one can have arrays of (Python, including NumPy) objects, thereby allowing for arrays of different sized elements. 
-- NumPy arrays facilitate advanced mathematical and other types of operations on large numbers of data. Typically, such operations are executed more efficiently and with less code than is possible using Python’s built-in sequences. 
-- A growing plethora of scientific and mathematical Python-based packages are using NumPy arrays; though these typically support Python-sequence input, they convert such input to NumPy arrays prior to processing, and they often output NumPy arrays. In other words, in order to efficiently use much (perhaps even most) of today’s scientific/mathematical Python-based software, just knowing how to use Python’s built-in sequence types is insufficient - one also needs to know how to use NumPy arrays.  
-
-Fake News Detection ![](Aspose.Words.e79f2849-eb9b-43d2-b2fa-5c70c308d5dd.021.png)
-
-Why is NumPy Fast? 
-
-Vectorization describes the absence of any explicit looping, indexing, etc., in the code - these things are taking place, of course, just “behind the scenes” in optimized, pre-compiled C code. Vectorized code has many advantages, among which are: 
-
-- vectorized code is more concise and easier to read 
-- fewer lines of code generally means fewer bugs 
-- the code more closely resembles standard mathematical notation (making it easier, typically, to correctly code mathematical constructs) 
-- vectorization results in more “Pythonic” code. Without vectorization, our code would be littered with inefficient and difficult to read for loops. 
-
-Broadcasting is the term used to describe the implicit element-by-element behavior of operations; generally speaking, in NumPy all operations, not just arithmetic operations, but logical, bit-wise, functional, etc., behave in this implicit element-by-element fashion, i.e., they broadcast. Moreover, in the example 
-
-above, a and b could be multidimensional arrays of the same shape, or a scalar and an array, or even two arrays of with different shapes, provided that the smaller array is “expandable” to the shape of the larger in such a way that the resulting broadcast is unambiguous. For detailed “rules” of broadcasting 
-
-see *basics.broadcasting*. 
-
-Who Else Uses NumPy? 
-
-NumPy fully supports an object-oriented approach, starting, once again, with *ndarray*. For example, *ndarray* is a class, possessing numerous methods and attributes. Many of its methods are mirrored by functions in the outer-most NumPy namespace, allowing the programmer to code in whichever paradigm they prefer. This flexibility has allowed the NumPy array dialect and NumPy *ndarray* class to become the *de-facto* language of multi-dimensional data interchange used in Python. 
-
-Fake News Detection ![](Aspose.Words.e79f2849-eb9b-43d2-b2fa-5c70c308d5dd.022.png)
-
-Creating NumPy Arrays, Loading and Saving Files 
-
-NumPy works with Python objects called multi-dimensional **arrays**. Arrays are basically collections of values, and they have one or more dimensions. NumPy array data structure is also called *ndarray*, short for n-dimensional array. An array with one dimension is called a **vector** and an array with two dimensions is called a **matrix**. Datasets are usually built as matrices and it is much easier to open those with NumPy instead of working with list of lists, for example. 
-
-Turning a list to a NumPy array is pretty simple: numpy\_array = np.array(list) 
-
-And printing/displaying the array will look like this: 
-
-array([[  7.4  ,  0.7 ,  0.  , ...,  0.56 ,  9.4  ,  5.  ], 
-
-[ 7.8  ,  0.88 ,  0.  , ...,  0.68 ,  9.8  ,  5.  ], [ 7.8  ,  0.76 ,  0.04 , ...,  0.65 ,  9.8  ,  5.  ], ..., 
-
-[ 6.3  ,  0.51 ,  0.13 , ...,  0.75 ,  11.  ,  6.  ], [ 5.9  ,  0.645,  0.12 , ...,  0.71 ,  10.2 ,  5.  ], [ 6.  ,  0.31 ,  0.47 , ...,  0.66 ,  11.  ,  6.  ]]) 
-
-Another option is to open a CSV file using the[ np.genfromtxt() f](https://docs.scipy.org/doc/numpy/reference/generated/numpy.genfromtxt.html)unction: 
-
-numpy\_array **=** np**.**genfromtxt("file.csv", delimiter**=**";", skip\_header**=**1) 
-
-The argument inside the brackets are the file name (and path, if needed), the delimiter set to ‘;’ to make sure it’s parsed correctly — you can use different characters to parse (like ‘,’ for example); and skip\_header set to ‘1’ will make the csv load to an array without the header row. You can just not include it if you do want the headers (as the default is zero). 
-
-You can also save NumPy arrays to files by using np.savetxt(). For 
-
-example, np.savetxt('file.txt',arr,delimiter=' ') will save to a text file and np.savetxt('file.csv',arr,delimiter=',') will save to a CSV file.  
-
-Fake News Detection ![](Aspose.Words.e79f2849-eb9b-43d2-b2fa-5c70c308d5dd.018.png)
-
-Another cool feature is the ability to create different arrays like random 
-
-arrays: np.random.rand(3,4) will create a 3x4 array of random numbers between 0 and 1 
-
-while np.random.rand(7,6)\*100 will create a 7x6 array of random numbers between 0 to 100; you can also define the size of the array in a different 
-
-way: np.random.randint(10,size=(3,2)) creates an array the size of 3x2 with random numbers between 0 and 9. Remember that the last digit (10) is not included in the range when you use this syntax. 
-
-It’s also possible to create an array of all zeros: np.zeros(4,3) (4x3 array of all zeros) or 
-
-ones np.ones((4)) (4x1 array of ones); you can the command np.full((3,2),8) to create a 3x2 array full of 8. You can, of course, change each and every one of these numbers to get the array you want. 
-
-Working and Inspecting Arrays 
-
-Now that you have your array loaded, you can check its size (number of elements) by 
-
-typing array.size and its shape (the dimensions — rows and columns) by typing array.shape. You can use array.dtype to get the data types of the array (floats, integers etc — see more in 
-
-the[ NumPy documentation)](https://docs.scipy.org/doc/numpy/user/basics.types.html) and if you need to convert the datatype you can use 
-
-the array.astype(dtype) command. If you need to convert a NumPy array to a Python list, there is a command for that too: array.tolist(). 
-
-Indexing and Slicing 
-
-Indexing and slicing NumPy arrays works very similarly to working with Python lists: array[5] will return the element in the 5th index, and array[2,5] will return the element in index[2][5]. You can also select the first five elements, for example, by using a colon (:). array[0:5] will return the first five elements (index 0–4) and array[0:5,4] will return the first five elements in column 4. You can use array[:2] to get elements from the beginning until index 2 (not including index 2) 
-
-or array[2:] to return from the 2nd index until the end of the array. array[:,1] will return the elements at index 1 on all rows. 
-
-
-Fake News Detection ![](Aspose.Words.e79f2849-eb9b-43d2-b2fa-5c70c308d5dd.023.png)
-
-Assigning values to a NumPy array is, again, very similar to doing so in Python lists: array[1]=4 will assign the value 4 to the element on index 1; you can do it to multiple values: array[1,5]=10 or use slicing when assigning values: array[:,10]=10 will change the entire 11th column to the value 10. 
-
-Sorting and Reshaping 
-
-array.sort() can be used to sort your NumPy array — you can pass different arguments inside the brackets to define what you want to sort on (by using the argument ‘order=string/list of strings’, for example. See more examples in the[ documentation)](https://docs.scipy.org/doc/numpy/reference/generated/numpy.ndarray.sort.html#numpy.ndarray.sort). array.sort(axis=0) will sort specific axis of the array — rows or columns. two\_d\_arr.flatten() will flatten a 2 dimensional array to a 1 dimensional array. array.T will transpose an array — meaning columns will become rows and vice versa. array.reshape(x,y) would reshape your array to the size you set with x and 
-
-y. array.resize((x,y)) will change the array shape to x and y and fill new values with zeros. Combining and Splitting 
-
-You can use np.concatenate((array1,array2),axis=0) to combine two NumPy arrays — this will add array 2 as rows to the end of array 1 
-
-while np.concatenate((array1,array2),axis=1) will add array 2 as columns to the end of array 1. np.split(array,2) will spilt the array into two sub-arrays 
-
-and np.hsplit(array,5) will split the array horizontally on the *5th* index. 
-
-Adding and Removing Elements 
-
-There are, of course, commands to add and remove elements from NumPy arrays: 
-
-- np.append(array,values) will append values to end of array. 
-- np.insert(array, 3, values)will insert values into array before index 3 
-- np.delete(array, 4, axis=0)will delete row on index 4 of array 
-- np.delete(array, 5, axis=1) will delete column on index 5 of array 
-
-
-Fake News Detection ![](Aspose.Words.e79f2849-eb9b-43d2-b2fa-5c70c308d5dd.020.png)
-
-Descriptive Statistics 
-
-You can use NumPy methods to get descriptive statistics on NumPy arrays: 
-
-- np.mean(array,axis=0) will return mean along specific axis (0 or 1) 
-- array.sum() will return the sum of the array 
-- array.min()will return the minimum value of the array 
-- array.max(axis=0)will return the maximum value of specific axis 
-- np.var(array)will return the variance of the array 
-- np.std(array,axis=1)will return the standard deviation of specific axis 
-- array.corrcoef()will return the correlation coefficient of the array 
-- numpy.median(array) will return the median of the array elements 
-
-Doing Math with NumPy 
-
-Any tutorial to NumPy would not be complete without the numerical and mathematical operations you can do with NumPy! Let’s go over them: 
-
-np.add(array ,1) will add 1 to each element in the array and np.add(array1,array2) will add array 2 to array 1. The same is true to np.subtract(), np.multiply(), np.divide() and np.power() — all these commands would work in exactly the same way as described above. 
-
-You can also get NumPy to return different values from the array, like: 
-
-- np.sqrt(array) will return the square root of each element in the array 
-- np.sin(array) will return the sine of each element in the array 
-
-
-
-Fake News Detection ![](Aspose.Words.e79f2849-eb9b-43d2-b2fa-5c70c308d5dd.024.png)
-
-- np.log(array) will return the natural log of each element in the array 
-- np.abs(arr) will return the absolute value of each element in the array 
-- np.array\_equal(arr1,arr2) will return True if the arrays have the same elements and shape 
-
-It is possible to round different values in array: np.ceil(array) will round up to the nearest integer, np.floor(array) will round down to the nearest integer and np.round(array) will round to the nearest integer. 
-
-
-
-|<p>Fake News Detection </p><p>**4.2-Pandas** </p><p>What is Pandas? </p><p>Pandas is a Python library used for working with data sets. </p><p>It has functions for analyzing, cleaning, exploring, and manipulating data. </p><p>The name "Pandas" has a reference to both "Panel Data", and "Python Data Analysis" and was created by Wes McKinney in 2008. </p><p>Why Use Pandas? </p><p>Pandas allows us to analyze big data and make conclusions based on statistical theories. Pandas can clean messy data sets, and make them readable and relevant. </p><p>Relevant data is very important in data science. </p><p>All properties and methods of the DataFrame object, with explanations and examples: </p>|
-
-
-**4.3-Matplotlib** 
+**4.2-Matplotlib** 
 
 What is Matplotlib? 
 
@@ -455,7 +280,7 @@ Matplotlib is open source and we can use it freely.
 
 Matplotlib is mostly written in python, a few segments are written in C, Objective-C and Javascript for Platform compatibility. 
 
-**4.4-Seaborn** 
+**4.3-Seaborn** 
 
 Seaborn Vs Matplotlib 
 
@@ -650,4 +475,3 @@ Fake Words are having higher negative coefficient it means any sentence or text 
 The task of classifying news manually requires in-depth knowledge of the domain and expertise to identify anomalies in the text. In this research, we discussed the problem of classifying fake news articles using machine learning models and ensemble techniques. The data we used in our work is collected from the World Wide Web and contains news articles from various domains to cover most of the news rather than specifically classifying political news. The primary aim of the research is to identify patterns in text that differentiate fake articles from true news. We extracted different textual features from the articles using an LIWC tool and used the feature set as an input to the models. The learning models were trained and parameter-tuned to obtain optimal accuracy. Some models have achieved comparatively higher accuracy than others. We used multiple performance metrics to compare the results for each algorithm. The ensemble learners have shown an overall better score on all performance metrics as compared to the individual learners. 
 
 Fake news detection has many open issues that require attention of researchers. For instance, in order to reduce the spread of fake news, identifying key elements involved in the spread of news is an important step. Graph theory and machine learning techniques can be employed to identify the key sources involved in spread of fake news. Likewise, real time fake news identification in videos can be another possible future direction. 
-DEPARTMENT OF IT  Page 49 
