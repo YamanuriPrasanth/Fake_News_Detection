@@ -354,8 +354,6 @@ Above,
 - *P*(*x|c*) is the likelihood which is the probability of *predictor* given *class*. 
 - *P*(*x*) is the prior probability of *predictor*. 
 
-Fake News Detection ![](Aspose.Words.e79f2849-eb9b-43d2-b2fa-5c70c308d5dd.028.png)
-
 **5.2-Passive Aggressive Algorithm** 
 
 The Passive-Aggressive algorithms are a family of Machine learning algorithms that are not very well known by beginners and even intermediate Machine Learning enthusiasts. However, they can be very useful and efficient for certain applications. 
