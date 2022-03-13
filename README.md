@@ -123,19 +123,19 @@ output : [‘Hi’, ‘my’, ‘name’, ‘is’, ‘Yash’]
 >Text cleaning basically refers to the functions applied to the raw text **in** order to remove unnecessary words, punctuation, extra white spaces, **and** giving the text more meaning **in** order to be processed by our ML algorithm. <br><br>
 >There are various Text Pre-processing/Cleaning techniques like : <br>
 >- Punctuation Removal 
-- Stop Words Removal 
-- Extra white space Removal 
-- Emoji Removal 
-- Emoticons Removal 
-- HTML tags Removal 
-- URLs Removal 
-- Conversion to Lower case 
-- Numbers Removal 
-- Expanding Contractions **and** so many more !<br><br> 
+>- Stop Words Removal 
+>- Extra white space Removal 
+>- Emoji Removal 
+>- Emoticons Removal 
+>- HTML tags Removal 
+>- URLs Removal 
+>- Conversion to Lower case 
+>- Numbers Removal 
+?- Expanding Contractions **and** so many more !<br><br> 
 >**Stemming** <br>
 >**Stemming** is the process of reducing a word to its word stem that affixes to suffixes and prefixes or to the roots of words known as a lemma.<br><br> 
 >**Lemmatizing** <br>
->**Lemmatization** takes into consideration the morphological analysis of the words. To do so, it is necessary to have detailed dictionaries which the algorithm can look through to link the form back to its lemma.<br> 
+>**Lemmatization** takes into consideration the morphological analysis of the words. To do so, it is necessary to have detailed dictionaries which the algorithm can look through to link the form back to its lemma.<br><br> 
 >Basic difference between stemming and lemmatizing* is that in **stemming**, the removal of suffix takes place without any meaning. On the other hand, **lemmatizing** takes morphological and lexical meaning into consideration and then returns a much more meaning full ‘lemma’. <br><br><br>
 
 
