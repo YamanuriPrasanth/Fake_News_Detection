@@ -34,71 +34,6 @@ News suggestion suggests recent news and suggests the news related to the news w
 >The main objective is to detect the fake news, which is a classic text classification problem with a straight forward proposition. It is needed to build a model that can differentiate between “Real” news and “Fake” news. This leads to consequences in social networking sites like content. Secondly, the  trolls  are  real humans who “aim to disrupt online communities” in hopes of provoking social  media users  into an emotional  response.  Other  one  is,  Cyborg. Cyborg users are the combination of “automated activities  with human input.”Humans build accounts and use programs to perform activities in social media. For false information detection, there are two categories: Linguistic Cue and Network Analysis approaches. The methods generally used to do such  type  of  works  are Naïve  Bayes  Classifier  and  Support  Vector Machines (SVM).<br><br> 
 
 
-### 5-Introduction to Natural Language Processing
-
-So the first question that comes in our mind is **What is NLP** ? Why is it so important and so much famous these days. 
-
-To understand it’s importance, let’s look at some promising examples :- 
-
-So have you ever wondered when we are using famous messaging apps like Whats App, Messenger, Hike etc, they suggest meaningful words before letting you complete the sentence. Another example would be like the SPAM or junk folder in your email, Chat Bots, Google Translation and so much more ! 
-
-So yeah, these were some cool examples of NLP or Natural Language Processing. 
-
-So the term Natural Language Processing can be defined as field concerned with the ability of a computer to understand, analyze, manipulate and potentially generate human language (or close to human language). 
-
-It can be any language English, Hindi, French, Spanish etc. 
-
-**Real Life Examples** :- 
-
-- Auto – Complete 
-- Auto – Correct 
-- Spam Detection 
-- Translation of one Language to Another 
-- Conversational Chat Bots 
-
-**Areas of NLP :-** 
-
-- **Sentiment Analysis** :- 
-
-*Sentiment Analysis* is a natural language processing technique used to determine whether data is positive, negative or neutral. Sentiment analysis is often performed on textual data to help businesses monitor brand and product sentiment in customer feedback, and understand customer needs. 
-
-For example :- Movie reviews sentiment analysis, tweets analysis etc. 
-
-- **Topic Modeling** :- 
-
-A *topic model* is one that automatically discovers topics occurring in a collection of documents. A trained model may then be used to discern which of these topics occur in new documents. The model can also pick out which portions of a document cover which topics. 
-
-- **Text Classification** :- 
-
-Text clarification is the process of categorizing the text into a group of words. By using NLP, text classification can automatically analyze text and then assign a set of predefined tags or categories based on its context. 
-
-Fake News Detection ![](Aspose.Words.e79f2849-eb9b-43d2-b2fa-5c70c308d5dd.006.png)
-
-### 6-NLP ToolKit – NLTK
-
-Now that we have some clue about what’s going on and what is Natural Language Processing, we will continue the NLP WITH PYTHON 
-
-NLTK i.e. Natural Language Processing Tool Kit is a suite of open-source tools created to make NLP processes in Python easier to build. 
-
-In the above lesson we have seen that how NLP has revolutionized many areas of language such as sentiment analysis, part-of-speech tagging, text classification, language translation, topic modeling, language generation and many many more. So there are many in-built functions and libraries that are included inside this NLTK library. 
-
-!pip install nltk 
-
-import nltk 
-
-nltk.download() 
-
-- this will allow you to download all the necessary tools present in the library 
-
-This library let us do all the necessary preprocessing on our text data without any pain :D, some of the components of this library are :- **stemming**, **lematizing***,* **tokenizing***, stop-words removal* and so many more… 
-
-
-
-Fake News Detection ![](Aspose.Words.e79f2849-eb9b-43d2-b2fa-5c70c308d5dd.007.png)
-
-**NLP PipeLine** 
-
-Whenever we work on *raw text* data, python does not understand words, it just sees a stream of characters and for it, all the characters are same having no meaning. Any Machine Learning algorithm/programming language only understands **Numbers**/**Vectors** and not words so in order to make it understand, we need to perform the above NLP pipeline as shown in the image above. 
 
 
 
@@ -106,7 +41,8 @@ Whenever we work on *raw text* data, python does not understand words, it just s
 
 
 
-### 7-Tokenization
+
+### 5-Tokenization
 
 >Tokenization is simply splitting the text/corpus into words or sentences. from nltk.tokenize import word\_tokenize <br>
 >sample\_text = 'Hi my name is Yash' tokenized\_text = word\_tokenize(sample\_text)<br> 
@@ -115,7 +51,7 @@ Whenever we work on *raw text* data, python does not understand words, it just s
 
 
 
-### 8-Text Cleaning
+### 6-Text Cleaning
 
 >Text cleaning basically refers to the functions applied to the raw text **in** order to remove unnecessary words, punctuation, extra white spaces, **and** giving the text more meaning **in** order to be processed by our ML algorithm. <br><br>
 >There are various Text Pre-processing/Cleaning techniques like : <br>
@@ -142,7 +78,7 @@ Whenever we work on *raw text* data, python does not understand words, it just s
 
 
 
-### 9-Vectorization 
+### 7-Vectorization 
 
 >As we discussed earlier that in order to make our machine learning algorithm make sense of text data, we need to convert the characters/words/sentences into numbers/vectors.<br><br> 
 >So what exactly is **Vectorization** ?<br><br> 
@@ -169,7 +105,7 @@ Whenever we work on *raw text* data, python does not understand words, it just s
 
 
 
-### 10-Machine Learning
+### 8-Machine Learning
 
 >After we have successfully converted our raw text data into vectors, we are now ready to feed this vectorized data and it’s corresponding label like Fake or Real in to our machine learning algorithm.<br><br> 
 >There are many Machine Learning algorithms out there like Decision Trees, Random Forest Classifier, KNN, Logistic Regression etc, but the algorithms which works better on textual data are **Naive Bayes Algorithm** which works on the concept of Conditional Probability<br> 
@@ -180,7 +116,7 @@ Whenever we work on *raw text* data, python does not understand words, it just s
 
 
 
-### 11-Libraries
+### 9-Libraries
 
 >These are the libraries used in this Project<br><br>
 >https://numpy.org/doc/stable/ <br>
@@ -192,7 +128,7 @@ Whenever we work on *raw text* data, python does not understand words, it just s
 >https://www.nltk.org/<br>
 
 
-### 12-Naive Bayes Algorithm 
+### 10-Naive Bayes Algorithm 
 
 >It  is  a classification technique Based  on  Bayes’  Theorem  with  an  assumption  of  independence  among predictors. In simple terms, a Naive Bayes classifier assumes that the presence of a particular feature in a class is unrelated to the presence of any other feature.<br><br> 
 >For example, a fruit may be considered to be an apple if it is red, round, and about 3 inches in diameter. Even if these features depend on each other or upon the existence of the other features, all of these properties independently contribute to the probability that this fruit is an apple and that is why it is known as ‘Naive’.<br>  
@@ -204,7 +140,7 @@ Whenever we work on *raw text* data, python does not understand words, it just s
 >- *P*(*x|c*) is the likelihood which is the probability of *predictor* given *class*. 
 >- *P*(*x*) is the prior probability of *predictor*. 
 
-### 13-Passive Aggressive Algorithm
+### 11-Passive Aggressive Algorithm
 
 >The Passive-Aggressive algorithms are a family of Machine learning algorithms that are not very well known by beginners and even intermediate Machine Learning enthusiasts. However, they can be very useful and efficient for certain applications.<br><br> 
 >**Note:** This is a high-level overview of the algorithm explaining how it works and when to use it. It does not go deep into the mathematics of how it works.<br><br> 
@@ -216,7 +152,7 @@ Whenever we work on *raw text* data, python does not understand words, it just s
 >**Aggressive:** If the prediction is incorrect, make changes to the model. i.e., some change to the model may correct it.<br>
 
 
-### 14-Data Flow Diagram
+### 12-Data Flow Diagram
 
 ![](https://static-01.hindawi.com/articles/complexity/volume-2020/8885861/figures/8885861.fig.001.svgz)
 
@@ -242,14 +178,14 @@ After Model training our Fake news model detects correctly fake news and real ne
 
 
 
-### 15-Outputs 
+### 13-Outputs 
 
 
 
-### 16-Future Enhancement 
+### 14-Future Enhancement 
 >In this Project We use Machine learning algorithms . In future Enhancement We use deep learning algorithms,Advanced NLP Techniques for better accuracy. 
 
-### Conclusion
+### 15-Conclusion
 
 >Fake Words are having higher negative coefficient it means any sentence or text contain that particular word may have higher chances of being faked….<br><br> 
 >The task of classifying news manually requires in-depth knowledge of the domain and expertise to identify anomalies in the text. In this research, we discussed the problem of classifying fake news articles using machine learning models and ensemble techniques. The data we used in our work is collected from the World Wide Web and contains news articles from various domains to cover most of the news rather than specifically classifying political news. The primary aim of the research is to identify patterns in text that differentiate fake articles from true news. We extracted different textual features from the articles using an LIWC tool and used the feature set as an input to the models. The learning models were trained and parameter-tuned to obtain optimal accuracy. Some models have achieved comparatively higher accuracy than others. We used multiple performance metrics to compare the results for each algorithm. The ensemble learners have shown an overall better score on all performance metrics as compared to the individual learners.<br><br> 
