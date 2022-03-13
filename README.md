@@ -183,7 +183,8 @@ After Model training our Fake news model detects correctly fake news and real ne
 
 ![image](https://user-images.githubusercontent.com/54884765/158070055-46a42316-7a22-48bc-9b32-c103472640d3.png)
 ![image](https://user-images.githubusercontent.com/54884765/158070065-aa080566-0804-448b-b079-6ddb79add29e.png)
-![image](https://user-images.githubusercontent.com/54884765/158070373-1eb06da7-e6bd-46bf-99ae-4543615d7067.png)
+![image](https://user-images.githubusercontent.com/54884765/158070418-08f1956a-6825-4574-ab39-19a0eb89c511.png)
+
 
 
 
