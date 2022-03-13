@@ -8,7 +8,7 @@
 
                                                                                                      
 
-### 1.1-Introduction To Project
+### 1-Introduction To Project
 
 >The advent of the World Wide Web and the rapid adoption of social media platforms (such as Facebook and Twitter) paved the way for information dissemination that has never been witnessed in the human history before. Besides other use cases, news outlets benefitted from the widespread use of social media platforms by providing updated news in near real time to its subscribers. The news media evolved from newspapers, tabloids, and magazines to a digital form such as online news platforms, blogs, social media feeds, and other digital media formats . It became easier for consumers to acquire the latest news at their fingertips. Facebook referrals account for 70% of traffic to news websites . These social media platforms in their current state are extremely powerful and useful for their ability to allow users to discuss and share ideas and debate over issues such as democracy, education, and health. However, such platforms are also used with a negative perspective by certain entities commonly for monetary gain and in other cases for creating biased opinions, manipulating mindsets, and spreading satire or absurdity. The phenomenon is commonly known as fake news.<br><br> 
 >There has been a rapid increase in the spread of fake news in the last decade, most prominently observed in the 2016 US elections . Such proliferation of sharing articles online that do not conform to facts has led to many problems not just limited to politics but covering various other domains such as sports, health, and also science . One such area affected by fake news is the financial markets , where a rumor can have disastrous consequences and may bring the market to a halt.<br><br>  
@@ -18,23 +18,23 @@
 
 
 
-### 1.2-Existing System
+### 2-Existing System
 
 >Using Bag of words,stop words techniques in Natural language processing, and using Machine learning naïve bayes algorithm to get most fake words and most real words .Fake words are having higher negative coefficient it means any sentence or text contain that particular word may have higher chances of being faked... 
 
-### 1.3-Proposed System
+### 3-Proposed System
 
 >**News Authenticator** <br>
 New authenticator  follows some  steps to check whether the news is true or false. It will compare news which  is  given by our side with different websites and various news sources if that news is found on any news website then it shows the given news is true, else it shows there has been no such news in last few days. This can help us from fake news.  These  days‟  fake  news  spread very fast because of social  media  and  the internet.  So,  news  authenticator  helps us to detect either the given news is fake or real. <br><br>
 >**News Suggestion / Recommendation System** <br>
 News suggestion suggests recent news and suggests the news related to the news which the user has given for authentication . If the news is fake, then this news suggestion gives the related news on that topic. The news suggestion suggests the news based on keywords which you give in your news based on keywords which you give in your news based on keywords which you give in your news which you wish to authenticate 
 
-### 1.4-Objective
+### 4-Objective
 
 >The main objective is to detect the fake news, which is a classic text classification problem with a straight forward proposition. It is needed to build a model that can differentiate between “Real” news and “Fake” news. This leads to consequences in social networking sites like content. Secondly, the  trolls  are  real humans who “aim to disrupt online communities” in hopes of provoking social  media users  into an emotional  response.  Other  one  is,  Cyborg. Cyborg users are the combination of “automated activities  with human input.”Humans build accounts and use programs to perform activities in social media. For false information detection, there are two categories: Linguistic Cue and Network Analysis approaches. The methods generally used to do such  type  of  works  are Naïve  Bayes  Classifier  and  Support  Vector Machines (SVM).<br><br> 
 
 
-### 2.1-Introduction to Natural Language Processing
+### 5-Introduction to Natural Language Processing
 
 So the first question that comes in our mind is **What is NLP** ? Why is it so important and so much famous these days. 
 
@@ -74,7 +74,7 @@ Text clarification is the process of categorizing the text into a group of words
 
 Fake News Detection ![](Aspose.Words.e79f2849-eb9b-43d2-b2fa-5c70c308d5dd.006.png)
 
-### 2.2-NLP ToolKit – NLTK
+### 6-NLP ToolKit – NLTK
 
 Now that we have some clue about what’s going on and what is Natural Language Processing, we will continue the NLP WITH PYTHON 
 
@@ -106,7 +106,7 @@ Whenever we work on *raw text* data, python does not understand words, it just s
 
 
 
-### 3.1-Tokenization
+### 7-Tokenization
 
 Tokenization is simply splitting the text/corpus into words or sentences. from nltk.tokenize import word\_tokenize 
 
@@ -118,7 +118,7 @@ output : [‘Hi’, ‘my’, ‘name’, ‘is’, ‘Yash’]
 
 
 
-### 3.2-Text Cleaning
+### 8-Text Cleaning
 
 Text cleaning basically refers to the functions applied to the raw text **in** order to remove unnecessary words, punctuation, extra white spaces, **and** giving the text more meaning **in** order to be processed by our ML algorithm. 
 
@@ -141,37 +141,21 @@ There are various Text Pre-processing/Cleaning techniques like :
 
 
 **Stemming** 
-
-**Stemming** is the process of reducing a word to its word stem that affixes to suffixes and prefixes or to the roots of words known as a lemma. 
+>**Stemming** is the process of reducing a word to its word stem that affixes to suffixes and prefixes or to the roots of words known as a lemma. 
 
 
 **Lemmatizing** 
-
-**Lemmatization** takes into consideration the morphological analysis of the words. To do so, it is necessary to have detailed dictionaries which the algorithm can look through to link the form back to its lemma. 
-
-*Basic difference between stemming and lemmatizing* is that in **stemming**, the removal of suffix takes place without any meaning. On the other hand, **lemmatizing** takes morphological and lexical meaning into consideration and then returns a much more meaning full ‘lemma’. 
+>**Lemmatization** takes into consideration the morphological analysis of the words. To do so, it is necessary to have detailed dictionaries which the algorithm can look through to link the form back to its lemma. 
+>*Basic difference between stemming and lemmatizing* is that in **stemming**, the removal of suffix takes place without any meaning. On the other hand, **lemmatizing** takes morphological and lexical meaning into consideration and then returns a much more meaning full ‘lemma’. 
 
 
 
 
 
-**Stop words removal** 
-
-The words which are generally filtered out before processing a natural language are 
-
-called **stop words**. These are actually the most common words in any language (like articles, prepositions, pronouns, conjunctions, etc) and does not add much information to the text. Examples of a few stop words in English are “the”, “a”, “an”, “so”, “what”. 
-
-**Why do we need to remove stop-words ?** 
-
-Stop words are available in abundance in any human language. By removing these words, we remove the low-level information from our text in order to give more focus to the important information. In order words, we can say that the removal of such words does not show any negative consequences on the model we train for our task. 
-
-Removal of stop words definitely reduces the dataset size and thus reduces the training time due to the fewer number of tokens involved in the training. 
-
-We do not always remove the stop words. The removal of stop words is highly dependent on the task we are performing and the goal we want to achieve. 
 
 
 
-### 3.3-Vectorization 
+### 9-Vectorization 
 
 As we discussed earlier that in order to make our machine learning algorithm make sense of text data, we need to convert the characters/words/sentences into numbers/vectors. 
 
@@ -215,7 +199,7 @@ When n = 3, it is called Tri-gram, Example = “my name is”, “yash”.
 
 
 
-### 3.4-Machine Learning
+### 10-Machine Learning
 
 After we have successfully converted our raw text data into vectors, we are now ready to feed this vectorized data and it’s corresponding label like Fake or Real in to our machine learning algorithm. 
 
@@ -237,12 +221,12 @@ I will be using **Naive Bayes Algorithm** as it considered to be good when deali
 
 Fake News Detection ![](Aspose.Words.e79f2849-eb9b-43d2-b2fa-5c70c308d5dd.003.png)
 
-### 4-Libraries
+### 11-Libraries
 
 https://numpy.org/doc/stable/ <br><br>
 
 
-### 5.1-Naive Bayes Algorithm 
+### 12-Naive Bayes Algorithm 
 
 It  is  a [ classification  technique  b](https://courses.analyticsvidhya.com/courses/introduction-to-data-science-2/?utm_source=blog&utm_medium=6stepsnaivebayesarticle)ased  on  Bayes’  Theorem  with  an  assumption  of  independence  among predictors. In simple terms, a Naive Bayes classifier assumes that the presence of a particular feature in a class is unrelated to the presence of any other feature. 
 
@@ -261,7 +245,7 @@ Above,
 - *P*(*x|c*) is the likelihood which is the probability of *predictor* given *class*. 
 - *P*(*x*) is the prior probability of *predictor*. 
 
-### 5.2-Passive Aggressive Algorithm
+### 13-Passive Aggressive Algorithm
 
 The Passive-Aggressive algorithms are a family of Machine learning algorithms that are not very well known by beginners and even intermediate Machine Learning enthusiasts. However, they can be very useful and efficient for certain applications. 
 
@@ -326,11 +310,11 @@ After Model training our Fake news model detects correctly fake news and real ne
 
 
 
-### 7.2-Outputs 
+### 14-Outputs 
 
 
 
-### Future Enhancement 
+### 15-Future Enhancement 
 >In this Project We use Machine learning algorithms . In future Enhancement We use deep learning algorithms,Advanced NLP Techniques for better accuracy. 
 
 ### Conclusion
