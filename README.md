@@ -108,13 +108,10 @@ Whenever we work on *raw text* data, python does not understand words, it just s
 
 ### 7-Tokenization
 
-Tokenization is simply splitting the text/corpus into words or sentences. from nltk.tokenize import word\_tokenize 
-
-sample\_text = 'Hi my name is Yash' tokenized\_text = word\_tokenize(sample\_text) 
-
-print(tokenized\_text) 
-
-output : [‘Hi’, ‘my’, ‘name’, ‘is’, ‘Yash’] 
+>Tokenization is simply splitting the text/corpus into words or sentences. from nltk.tokenize import word\_tokenize <br>
+>sample\_text = 'Hi my name is Yash' tokenized\_text = word\_tokenize(sample\_text)<br> 
+>print(tokenized\_text) <br>
+>output : [‘Hi’, ‘my’, ‘name’, ‘is’, ‘Yash’] <br>
 
 
 
@@ -147,67 +144,39 @@ output : [‘Hi’, ‘my’, ‘name’, ‘is’, ‘Yash’]
 
 ### 9-Vectorization 
 
-As we discussed earlier that in order to make our machine learning algorithm make sense of text data, we need to convert the characters/words/sentences into numbers/vectors. 
-
-So what exactly is **Vectorization** ? 
-
-*Vectorization* is the process of conversion of words into numbers/vectors. 
-
-sample\_text = 'My name is Yash' vectorized\_text = [123, 32, 15, 107] 
-
-**Types of Vectorization methods :-** 
-
-- Count Vectorization 
-- N-Gram Vectorization 
-- TF-IDF Vectorization 
-- Word2Vec 
-- BERT (It is basically Word2Vec with Context) (state-of-the-art, Advance topic) 
-
-In this Project we use Count Vectorization and N-Gram Vectorization.Let us discuss about this two Techniques 
-
-**Count Vectorization Technique :-** 
-
-It is the simplest of all vectorization techniques. 
-
-- It creates a **Document Term Matrix**, now a doc-term matrix is a matrix whose **rows** are every single element our list, for example, we have **4** elements/docs in our ‘sample\_text’, **columns** are all the unique words from our whole document/whole ‘sample\_text’. Each cell of our Doc-Term matrix represents the **frequency** of that word in current cell. 
-- Now let’s code what we discussed above ! (It’s really simple!). 
-
-
-**N-gram Vectorization Technique :-** 
-
-It also creates a Document Term matrix. 
-
-Columns represent all columns of adjacent words of length ‘n’. 
-
-Rows represent each document in our sample\_text. 
-
-Cell represent Count. 
-
-When n = 1, it is called Uni-gram, which is basically Count Vectorizer. Example = “my”, “name”, “is”, “yash”. When n = 2, it is called Bi-gram, Example = “my name”, “is yash”. 
-
-When n = 3, it is called Tri-gram, Example = “my name is”, “yash”. 
+>As we discussed earlier that in order to make our machine learning algorithm make sense of text data, we need to convert the characters/words/sentences into numbers/vectors.<br><br> 
+>So what exactly is **Vectorization** ?<br><br> 
+**Vectorization** is the process of conversion of words into numbers/vectors.<br><br> 
+>sample\_text = 'My name is Yash' vectorized\_text = [123, 32, 15, 107]<br><br> 
+>**Types of Vectorization methods :-**<br> 
+>- Count Vectorization 
+>- N-Gram Vectorization 
+>- TF-IDF Vectorization 
+>- Word2Vec 
+>- BERT (It is basically Word2Vec with Context) (state-of-the-art, Advance topic)<br><br> 
+>In this Project we use Count Vectorization and N-Gram Vectorization.Let us discuss about this two Techniques<br><br> 
+>**Count Vectorization Technique :-**<br> 
+>It is the simplest of all vectorization techniques.<br><br> 
+>- It creates a **Document Term Matrix**, now a doc-term matrix is a matrix whose **rows** are every single element our list, for example, we have **4** elements/docs <br> ‘sample\_text’, **columns** are all the unique words from our whole document/whole ‘sample\_text’. Each cell of our Doc-Term matrix represents the **frequency** of that word in current cell.<br> 
+>- Now let’s code what we discussed above ! (It’s really simple!). <br><br>
+>**N-gram Vectorization Technique :-** <br>
+>- It also creates a Document Term matrix.<br> 
+>- Columns represent all columns of adjacent words of length ‘n’. <br>
+>- Rows represent each document in our sample\_text.<br>
+>- Cell represent Count.<br>
+>- When n = 1, it is called Uni-gram, which is basically Count Vectorizer. Example = “my”, “name”, “is”, “yash”. When n = 2, it is called Bi-gram, Example = “my name”, “is yash”.<br>
+>- When n = 3, it is called Tri-gram, Example = “my name is”, “yash”. 
 
 
 
 ### 10-Machine Learning
 
-After we have successfully converted our raw text data into vectors, we are now ready to feed this vectorized data and it’s corresponding label like Fake or Real in to our machine learning algorithm. 
-
-There are many Machine Learning algorithms out there like Decision Trees, Random Forest Classifier, KNN, Logistic Regression etc, but the algorithms which works better on textual data are **Naive Bayes Algorithm** which works on the concept of Conditional Probability 
-
-After training with any of the mentioned Machine Learning/Deep Learning algorithms, We can now say that we have successfully trained our Fake News Classifier model which can detect whether a message/email is Fake or not! 
-
-This is our NLP pipeline. 
-
-from sklearn.feature\_extraction.text import CountVectorizer 
-
-In This project I will be using n-gram Vectorization technique because it gave me around me around 
-
-90% accuracy 
-
-Now the interesting part – **Model Building** 
-
-I will be using **Naive Bayes Algorithm** as it considered to be good when dealing with text data. 
+>After we have successfully converted our raw text data into vectors, we are now ready to feed this vectorized data and it’s corresponding label like Fake or Real in to our machine learning algorithm.<br><br> 
+>There are many Machine Learning algorithms out there like Decision Trees, Random Forest Classifier, KNN, Logistic Regression etc, but the algorithms which works better on textual data are **Naive Bayes Algorithm** which works on the concept of Conditional Probability<br> 
+>After training with any of the mentioned Machine Learning/Deep Learning algorithms, We can now say that we have successfully trained our Fake News Classifier model which can detect whether a message/email is Fake or not!<br> 
+>In This project I will be using n-gram Vectorization technique because it gave me around me around <br><br> 
+>Now the interesting part – **Model Building** <br> 
+>I will be using **Naive Bayes Algorithm** as it considered to be good when dealing with text data.<br>
 
 
 
@@ -244,7 +213,7 @@ I will be using **Naive Bayes Algorithm** as it considered to be good when deali
 >Passive-Aggressive algorithms are somewhat similar to a Perceptron model, in the sense that they do not require a learning rate. However, they do include a regularization parameter.<br><br> 
 >**How Passive-Aggressive Algorithms Work:** Passive-Aggressive algorithms are called so because :<br><br> 
 >**Passive:** If the prediction is correct, keep the model and do not make any changes. i.e., the data in the example is not enough to cause any changes in the model.<br> 
->**Aggressive:** If the prediction is incorrect, make changes to the model. i.e., some change to the model may correct it.<br><br><br> 
+>**Aggressive:** If the prediction is incorrect, make changes to the model. i.e., some change to the model may correct it.<br>
 
 
 ### 14-Data Flow Diagram
