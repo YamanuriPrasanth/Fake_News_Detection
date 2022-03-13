@@ -264,7 +264,7 @@ I will be using **Naive Bayes Algorithm** as it considered to be good when deali
 >**Dataset collection**<br>
 >In This Project we collect data set From Kaggle website <br><br>
 >**Data Cleaning**<br> 
->**Data cleaning** is the process of preparing raw **data** for analysis by removing bad **data**, organizing the raw **data**, and filling in the null values. Ultimately, >**cleaning data** prepares the **data** for the process of **Machine learning** when the most valuable information can be pulled from the **data** set. <br><br>
+>**Data cleaning** is the process of preparing raw **data** for analysis by removing bad **data**, organizing the raw **data**, and filling in the null values. Ultimately,**cleaning data** prepares the **data** for the process of **Machine learning** when the most valuable information can be pulled from the **data** set. <br><br>
 >**Exploration**<br> 
 >Data exploration definition: <br>
 >Data exploration refers to the initial step in data analysis in which data we use data visualization and statistical techniques to describe dataset characterizations, such as size, quantity, and accuracy, in order to better understand the nature of the data. <br><br>
