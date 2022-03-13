@@ -219,49 +219,42 @@ Now the interesting part – **Model Building**
 
 I will be using **Naive Bayes Algorithm** as it considered to be good when dealing with text data. 
 
-Fake News Detection ![](Aspose.Words.e79f2849-eb9b-43d2-b2fa-5c70c308d5dd.003.png)
+
 
 ### 11-Libraries
 
-https://numpy.org/doc/stable/ <br><br>
+>These are the libraries used in this Project<br><br>
+>https://numpy.org/doc/stable/ <br>
+>https://pandas.pydata.org/docs/<br>
+>https://matplotlib.org/stable/users/index.html<br>
+>https://seaborn.pydata.org/<br>
+>https://docs.scipy.org/doc/scipy/<br>
+>https://scikit-learn.org/stable/<br>
+>https://www.nltk.org/<br>
 
 
 ### 12-Naive Bayes Algorithm 
 
-It  is  a [ classification  technique  b](https://courses.analyticsvidhya.com/courses/introduction-to-data-science-2/?utm_source=blog&utm_medium=6stepsnaivebayesarticle)ased  on  Bayes’  Theorem  with  an  assumption  of  independence  among predictors. In simple terms, a Naive Bayes classifier assumes that the presence of a particular feature in a class is unrelated to the presence of any other feature. 
-
-For example, a fruit may be considered to be an apple if it is red, round, and about 3 inches in diameter. Even if these features depend on each other or upon the existence of the other features, all of these properties independently contribute to the probability that this fruit is an apple and that is why it is known as ‘Naive’. 
-
-Naive Bayes model is easy to build and particularly useful for very large data sets. Along with simplicity, Naive Bayes is known to outperform even highly sophisticated classification methods. 
-
-Bayes theorem provides a way of calculating posterior probability P(c|x) from P(c), P(x) and P(x|c). Look at the equation below: 
-
-
-
-Above, 
-
-- *P*(*c|x*) is the posterior probability of *class* (c, *target*) given *predictor* (x, *attributes*). 
-- *P*(*c*) is the prior probability of *class*. 
-- *P*(*x|c*) is the likelihood which is the probability of *predictor* given *class*. 
-- *P*(*x*) is the prior probability of *predictor*. 
+>It  is  a classification technique Based  on  Bayes’  Theorem  with  an  assumption  of  independence  among predictors. In simple terms, a Naive Bayes classifier assumes that the presence of a particular feature in a class is unrelated to the presence of any other feature.<br><br> 
+>For example, a fruit may be considered to be an apple if it is red, round, and about 3 inches in diameter. Even if these features depend on each other or upon the existence of the other features, all of these properties independently contribute to the probability that this fruit is an apple and that is why it is known as ‘Naive’.<br>  
+>Naive Bayes model is easy to build and particularly useful for very large data sets. Along with simplicity, Naive Bayes is known to outperform even highly sophisticated classification methods.<br>  
+>Bayes theorem provides a way of calculating posterior probability P(c|x) from P(c), P(x) and P(x|c). Look at the equation below:<br>
+>Above,<br> 
+>- *P*(*c|x*) is the posterior probability of *class* (c, *target*) given *predictor* (x, *attributes*). 
+>- *P*(*c*) is the prior probability of *class*. 
+>- *P*(*x|c*) is the likelihood which is the probability of *predictor* given *class*. 
+>- *P*(*x*) is the prior probability of *predictor*. 
 
 ### 13-Passive Aggressive Algorithm
 
-The Passive-Aggressive algorithms are a family of Machine learning algorithms that are not very well known by beginners and even intermediate Machine Learning enthusiasts. However, they can be very useful and efficient for certain applications. 
-
-**Note:** This is a high-level overview of the algorithm explaining how it works and when to use it. It does not go deep into the mathematics of how it works. 
-
-Passive-Aggressive algorithms are generally used for large-scale learning. It is one of the few ‘**online- learning algorithms**‘. In online machine learning algorithms, the input data comes in sequential order and the machine learning model is updated step-by-step, as opposed to batch learning, where the entire training dataset is used at once. This is very useful in situations where there is a huge amount of data and it is computationally infeasible to train the entire dataset because of the sheer size of the data. We can simply say that an online-learning algorithm will get a training example, update the classifier, and then throw away the example. 
-
-A very good example of this would be to detect fake news on a social media website like Twitter, where new data is being added every second. To dynamically read data from Twitter continuously, the data would be huge, and using an online-learning algorithm would be ideal. 
-
-Passive-Aggressive algorithms are somewhat similar to a Perceptron model, in the sense that they do not require a learning rate. However, they do include a regularization parameter. 
-
-**How Passive-Aggressive Algorithms Work:** Passive-Aggressive algorithms are called so because : 
-
-**Passive:** If the prediction is correct, keep the model and do not make any changes. i.e., the data in the example is not enough to cause any changes in the model. 
-
-**Aggressive:** If the prediction is incorrect, make changes to the model. i.e., some change to the model may correct it. 
+>The Passive-Aggressive algorithms are a family of Machine learning algorithms that are not very well known by beginners and even intermediate Machine Learning enthusiasts. However, they can be very useful and efficient for certain applications.<br><br> 
+>**Note:** This is a high-level overview of the algorithm explaining how it works and when to use it. It does not go deep into the mathematics of how it works.<br><br> 
+>Passive-Aggressive algorithms are generally used for large-scale learning. It is one of the few ‘**online- learning algorithms**‘. In online machine learning algorithms, the input data comes in sequential order and the machine learning model is updated step-by-step, as opposed to batch learning, where the entire training dataset is used at once. This is very useful in situations where there is a huge amount of data and it is computationally infeasible to train the entire dataset because of the sheer size of the data. We can simply say that an online-learning algorithm will get a training example, update the classifier, and then throw away the example.<br><br> 
+>A very good example of this would be to detect fake news on a social media website like Twitter, where new data is being added every second. To dynamically read data from Twitter continuously, the data would be huge, and using an online-learning algorithm would be ideal.<br><br> 
+>Passive-Aggressive algorithms are somewhat similar to a Perceptron model, in the sense that they do not require a learning rate. However, they do include a regularization parameter.<br><br> 
+>**How Passive-Aggressive Algorithms Work:** Passive-Aggressive algorithms are called so because :<br><br> 
+>**Passive:** If the prediction is correct, keep the model and do not make any changes. i.e., the data in the example is not enough to cause any changes in the model.<br> 
+>**Aggressive:** If the prediction is incorrect, make changes to the model. i.e., some change to the model may correct it.<br><br><br> 
 
 
 ### 14-Data Flow Diagram
@@ -276,11 +269,11 @@ Passive-Aggressive algorithms are somewhat similar to a Perceptron model, in the
 >Data exploration definition: <br>
 >Data exploration refers to the initial step in data analysis in which data we use data visualization and statistical techniques to describe dataset characterizations, such as size, quantity, and accuracy, in order to better understand the nature of the data. <br><br>
 >Data exploration techniques include both manual analysis and automated data exploration software solutions that visually explore and identify relationships between different data variables, the structure of the dataset, the presence of outliers, and the distribution of data values in order to reveal patterns and points of interest, enabling data analysts to gain greater insight into the raw data.<br><br> 
->After Exploration We extract important features this is called feature selection and split the data set in to training data and testing data <br><br><br>
+>After Exploration We extract important features this is called feature selection and split the data set in to training data and testing data <br><br>
 >**Model Training**<br> 
->A machine learning training model is a process in which a machine learning (ML) algorithm is fed with sufficient training data to learn from. <br><br><br>
+>A machine learning training model is a process in which a machine learning (ML) algorithm is fed with sufficient training data to learn from. <br><br>
 >**Model Evaluation**<br> 
->**Model evaluation** aims to estimate the generalization accuracy of a **model** on future (unseen/out-of-sample) data.<br><br><br> 
+>**Model evaluation** aims to estimate the generalization accuracy of a **model** on future (unseen/out-of-sample) data.<br><br>
 >**Model Tuning**<br> 
 >**Model tuning helps to increase the accuracy** of a machine learning **model**. 
 Explanation: **Tuning** can be defined as the process of improvising the performance of the **model** without creating any hype or creating over fitting of a variance. 
