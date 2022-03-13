@@ -264,57 +264,37 @@ Passive-Aggressive algorithms are somewhat similar to a Perceptron model, in the
 **Aggressive:** If the prediction is incorrect, make changes to the model. i.e., some change to the model may correct it. 
 
 
-### Data Flow Diagram
+### 14-Data Flow Diagram
 
-![download](https://user-images.githubusercontent.com/54884765/158026515-06f3dc88-7816-42b3-bfff-61fbfce2ea4e.png)
+![](https://static-01.hindawi.com/articles/complexity/volume-2020/8885861/figures/8885861.fig.001.svgz)
 
-
-
-In This Project we collect data set From Kaggle website 
-
-**Data Cleaning** 
-
-**Data cleaning** is the process of preparing raw **data** for analysis by removing bad **data**, organizing the raw **data**, and filling in the null values. Ultimately, **cleaning data** prepares the **data** for the process of **Machine** 
-
-**learning** when the most valuable information can be pulled from the **data** set. 
-
-Fake News Detection ![](Aspose.Words.e79f2849-eb9b-43d2-b2fa-5c70c308d5dd.030.png)
-
-**Exploration** 
-
--Data exploration definition: 
-
-Data exploration refers to the initial step in data analysis in which data we use[ data visualization a](https://www.omnisci.com/learn/data-visualization)nd statistical techniques to describe dataset characterizations, such as size, quantity, and accuracy, in order to better understand the nature of the data. 
-
-Data exploration techniques include both manual analysis and automated data exploration software solutions that visually explore and identify relationships between different data variables, the structure of the dataset, the presence of outliers, and the distribution of data values in order to reveal patterns and points of interest, enabling data analysts to gain greater insight into the raw data. 
-
-After Exploration We extract important features this is called feature selection and split the data set in to training data and testing data 
-
-**Model Training** 
-
-A machine learning training model is a process in which a machine learning (ML) algorithm is fed with sufficient training data to learn from. 
-
-**Model Evaluation** 
-
-**Model evaluation** aims to estimate the generalization accuracy of a **model** on future (unseen/out-of-sample) data. 
-
-**Model Tuning** 
-
-**Model tuning helps to increase the accuracy** of a machine learning **model**. 
-
+>**Dataset collection**<br>
+>In This Project we collect data set From Kaggle website <br><br>
+>**Data Cleaning**<br> 
+>**Data cleaning** is the process of preparing raw **data** for analysis by removing bad **data**, organizing the raw **data**, and filling in the null values. Ultimately, >**cleaning data** prepares the **data** for the process of **Machine learning** when the most valuable information can be pulled from the **data** set. <br><br>
+>**Exploration**<br> 
+>Data exploration definition: <br>
+>Data exploration refers to the initial step in data analysis in which data we use data visualization and statistical techniques to describe dataset characterizations, such as size, quantity, and accuracy, in order to better understand the nature of the data. <br><br>
+>Data exploration techniques include both manual analysis and automated data exploration software solutions that visually explore and identify relationships between different data variables, the structure of the dataset, the presence of outliers, and the distribution of data values in order to reveal patterns and points of interest, enabling data analysts to gain greater insight into the raw data.<br><br> 
+>After Exploration We extract important features this is called feature selection and split the data set in to training data and testing data <br><br><br>
+>**Model Training**<br> 
+>A machine learning training model is a process in which a machine learning (ML) algorithm is fed with sufficient training data to learn from. <br><br><br>
+>**Model Evaluation**<br> 
+>**Model evaluation** aims to estimate the generalization accuracy of a **model** on future (unseen/out-of-sample) data.<br><br><br> 
+>**Model Tuning**<br> 
+>**Model tuning helps to increase the accuracy** of a machine learning **model**. 
 Explanation: **Tuning** can be defined as the process of improvising the performance of the **model** without creating any hype or creating over fitting of a variance. 
-
-After Model training our Fake news model detects correctly fake news and real news. 
-
+After Model training our Fake news model detects correctly fake news and real news. <br><br><br>
 
 
 
 
-### 14-Outputs 
+
+### 15-Outputs 
 
 
 
-### 15-Future Enhancement 
+### 16-Future Enhancement 
 >In this Project We use Machine learning algorithms . In future Enhancement We use deep learning algorithms,Advanced NLP Techniques for better accuracy. 
 
 ### Conclusion
